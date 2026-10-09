@@ -25,11 +25,11 @@ const sohoGothic = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Fitness First | AnasPlus",
-    template: "%s | Fitness First",
+    default: "Anas Plus Fitness Club",
+    template: "%s | Anas Plus",
   },
   description:
-    "Maximum results with personal coaching - individual, flexible, motivating.",
+    "Anas Plus Fitness Club - personal coaching, Pilates, Zumba, Spinning and more in Sfax. Le goût du corps, le goût du sport.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -10,7 +10,7 @@ export default function GymsHero() {
           Where do you want to train?
         </h1>
         <p className="mt-2 font-sans text-[16px] text-ff-graphit">
-          224 Fitness First clubs – close to you too.
+          Two Anas Plus clubs in Sfax – Bouzayen and Route Tunis.
         </p>
 
         <form
@@ -19,7 +19,7 @@ export default function GymsHero() {
         >
           <input
             type="text"
-            placeholder="Enter city, zip code, or street"
+            placeholder="Search by neighborhood"
             className="w-full border border-[#9c9e9f] px-4 py-3 font-sans text-[15px] text-black focus:ring-2 focus:ring-ff-red focus:outline-none"
           />
           <button
@@ -30,7 +30,7 @@ export default function GymsHero() {
             <Search className="h-5 w-5" />
           </button>
         </form>
-        <p className="mt-3 font-sans text-sm text-ff-graphit">224 clubs found</p>
+        <p className="mt-3 font-sans text-sm text-ff-graphit">2 clubs in Sfax</p>
       </div>
     </section>
   );

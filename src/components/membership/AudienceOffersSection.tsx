@@ -2,25 +2,25 @@ import Image from "next/image";
 
 const OFFERS = [
   {
-    title: "Students & Apprentices",
+    title: "Women Only",
     description:
-      "Enjoy €2 off your weekly rate, plus flexible payment pauses during semester breaks.",
-    image: "/images/membership/offer-students.webp",
-    href: "/membership/students",
+      "100% Femmes sessions run every week across cardio, abs and yoga classes, alongside our mixed sessions.",
+    image: "/images/anasplus/class-yoga.jpg",
+    href: "/women-only",
   },
   {
-    title: "Companies",
+    title: "New Members",
     description:
-      "Whether you're an employer or employee – find out about exclusive corporate membership rates.",
-    image: "/images/membership/offer-corporate.webp",
-    href: "/corporate-fitness",
+      "First time at Anas Plus? We run open days throughout the year — follow us on Instagram for the next one.",
+    image: "/images/anasplus/class-zumba-2.jpg",
+    href: "/free-trial",
   },
   {
-    title: "Switching Studios",
+    title: "Train Together",
     description:
-      "Already signed up elsewhere? Switch to Fitness First and train free for up to 12 months.",
-    image: "/images/membership/offer-switchers.jpg",
-    href: "/membership/switch",
+      "Bring a friend and keep each other motivated. More energy, more accountability, better results.",
+    image: "/images/anasplus/class-spinning.jpg",
+    href: "/classes",
   },
 ];
 

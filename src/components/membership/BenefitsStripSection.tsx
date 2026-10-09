@@ -1,15 +1,15 @@
 const BENEFITS = [
   {
-    title: "Pause Option",
-    text: "Stay fully flexible: pause your contract free of charge for up to 12 weeks, whenever life gets in the way.",
+    title: "Women Only",
+    text: "Several sessions each week — cardio, abs, yoga and more — run 100% Femmes, alongside our mixed classes.",
   },
   {
-    title: "Flex Option",
-    text: "New members get a 3-month flex window: cancel with 4 weeks' notice for a small fee if it's not the right fit.",
+    title: "Two Clubs",
+    text: "Train at Anas Plus Bouzayen or Anas Plus Route Tunis, both in Sfax, each with its own weekly schedule.",
   },
   {
-    title: "Training Package",
-    text: "Get a fitness assessment and body analysis twice a year, plus a personal training plan built around your goals.",
+    title: "Community Events",
+    text: "From Pilates Outdoor — over 600 participants at our first edition — to open days, we train together off the schedule too.",
   },
 ];
 
@@ -18,7 +18,7 @@ export default function BenefitsStripSection() {
     <section className="bg-black px-6 py-16 text-center lg:px-8">
       <div className="container mx-auto">
         <h2 className="font-sans text-[28px] font-bold not-italic normal-case text-white">
-          Membership, made flexible
+          What makes Anas Plus different
         </h2>
         <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-3">
           {BENEFITS.map((benefit) => (

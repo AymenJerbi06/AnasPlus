@@ -2,22 +2,22 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 
 const BENEFITS = [
-  "Flexible contract pause anytime",
-  "Training in 200+ studios nationwide",
-  "No signup fee on 24-month plans",
+  "Personal coaching & group classes",
+  "Pilates, Zumba, Spinning, Yoga & CrossFit",
+  "Women-only sessions available",
 ];
 
 export default function MembershipHero() {
   return (
     <section className="relative flex min-h-[460px] items-center overflow-hidden bg-black lg:min-h-[560px]">
       <Image
-        src="/images/membership/hero.jpg"
-        alt="Fitness First members training together"
+        src="/images/anasplus/class-strength.jpg"
+        alt="Anas Plus members training together with barbells"
         fill
         priority
         sizes="100vw"
         className="object-cover"
-        style={{ objectPosition: "center 30%" }}
+        style={{ objectPosition: "center 25%" }}
       />
       <div
         aria-hidden="true"
@@ -29,8 +29,8 @@ export default function MembershipHero() {
             Membership &amp; Pricing
           </h1>
           <p className="mx-auto mt-4 max-w-[520px] font-sans text-[16px] leading-[1.4] text-white sm:text-[18px] lg:mx-0">
-            Find the plan that fits your goals – from essentials to
-            high-end. Join Fitness First and start training today.
+            Coaching perso ou cours collectifs — find the way of training
+            that fits you. Join Anas Plus and start today.
           </p>
           <ul className="mx-auto mt-6 flex max-w-[480px] flex-col gap-2 text-left sm:mx-0">
             {BENEFITS.map((benefit) => (
@@ -47,7 +47,7 @@ export default function MembershipHero() {
             href="#plans"
             className="mt-6 inline-block rounded-none border-2 border-ff-red bg-ff-red px-4 py-3 font-heading text-[16px] italic uppercase text-white transition-colors duration-200 ease-out hover:border-ff-red-dark hover:bg-ff-red-dark"
           >
-            View Membership Plans
+            View Membership Options
           </a>
         </div>
       </div>

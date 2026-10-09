@@ -9,7 +9,7 @@ import CtaSection from "@/components/CtaSection";
 export const metadata: Metadata = {
   title: "Personal Training",
   description:
-    "Maximum results with personal coaching - individual, flexible, motivating.",
+    "Personal coaching at Anas Plus Fitness Club - individual, flexible, built around your goals.",
 };
 
 export default function Home() {
@@ -20,7 +20,13 @@ export default function Home() {
       <FaqSection />
       <VideoSection />
       <ArticlesSection />
-      <CtaSection />
+      <CtaSection
+        heading="Ready to get started? Call us and book your first session today!"
+        primaryLabel="CALL 53 266 222"
+        primaryHref="tel:53266222"
+        secondaryLabel="MESSAGE US ON INSTAGRAM"
+        secondaryHref="https://instagram.com/anasplusbouzayen"
+      />
     </>
   );
 }

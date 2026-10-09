@@ -1,7 +1,12 @@
 const STEPS = [
-  { number: "- 1 -", text: "Choose a personal trainer." },
-  { number: "- 2 -", text: "Arrange an appointment by email or phone." },
+  { number: "- 1 -", text: "Call or message us to meet your coach." },
+  { number: "- 2 -", text: "We build a plan around your goals." },
   { number: "- 3 -", text: "Your training can begin!" },
+] as const;
+
+const LOCATIONS = [
+  { name: "Anas Plus Bouzayen", href: "/gyms#bouzayen" },
+  { name: "Anas Plus Route Tunis", href: "/gyms#rte-tunis" },
 ] as const;
 
 export function BookingStepsSection() {
@@ -26,19 +31,28 @@ export function BookingStepsSection() {
         </div>
 
         <div className="mt-16 flex flex-col items-start gap-4 md:flex-row md:items-center">
-          <label
-            htmlFor="booking-city-search"
-            className="text-base font-bold text-white"
-          >
-            Please select at least one city
-          </label>
-          <input
-            id="booking-city-search"
-            type="text"
-            placeholder="Search"
-            className="w-full rounded-none border-none bg-white px-4 py-3.5 text-black placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-ff-red md:w-80"
-          />
+          <span className="text-base font-bold text-white">
+            Choose your club
+          </span>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            {LOCATIONS.map((loc) => (
+              <a
+                key={loc.href}
+                href={loc.href}
+                className="border-2 border-white bg-transparent px-5 py-3 text-center font-sans text-sm font-bold text-white transition-colors duration-200 hover:border-ff-red hover:bg-ff-red"
+              >
+                {loc.name}
+              </a>
+            ))}
+          </div>
         </div>
+
+        <p className="mt-6 font-sans text-sm text-white/70">
+          Or call us directly:{" "}
+          <a href="tel:53266222" className="text-ff-red hover:underline">
+            53 266 222
+          </a>
+        </p>
       </div>
     </section>
   );

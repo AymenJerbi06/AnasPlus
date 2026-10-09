@@ -2,29 +2,29 @@ import Image from "next/image";
 
 const AREAS = [
   {
-    name: "Booty Zone",
-    description: "Targeted glute workouts with innovative Glutebuilder® equipment.",
-    image: "/images/membership/area-booty-zone.jpg",
+    name: "Pilates",
+    description: "Strength, balance, posture & control on the mat and the Combo Chair.",
+    image: "/images/anasplus/class-pilates.jpg",
   },
   {
-    name: "EGYM",
-    description: "Smart strength training: EGYM machines adjust themselves to you automatically.",
-    image: "/images/membership/area-egym.jpg",
+    name: "Zumba",
+    description: "Dance it, feel it, sweat it — explosive energy, every session.",
+    image: "/images/anasplus/class-zumba-2.jpg",
   },
   {
-    name: "Recovery",
-    description: "Release tension and work on tight muscles in the dedicated recovery circuit.",
-    image: "/images/membership/area-recovery.webp",
+    name: "Spinning",
+    description: "Tuesdays & Thursdays, pedal to the beat in our Spinning sessions.",
+    image: "/images/anasplus/class-spinning.jpg",
   },
   {
-    name: "Performance",
-    description: "Modern power racks, strength machines, and free weights.",
-    image: "/images/membership/area-performance.webp",
+    name: "Yoga",
+    description: "Slow down, breathe, and reset — women-only sessions available.",
+    image: "/images/anasplus/class-yoga.jpg",
   },
   {
-    name: "Functional",
-    description: "Train with maximum focus in our new small-group functional sessions.",
-    image: "/images/membership/area-functional.webp",
+    name: "CrossFit",
+    description: "Strength, speed and endurance in one high-intensity session.",
+    image: "/images/anasplus/class-strength.jpg",
   },
 ];
 
@@ -33,10 +33,10 @@ export default function TrainingAreasSection() {
     <section className="bg-white px-6 py-16 lg:px-8">
       <div className="container mx-auto">
         <p className="text-center font-sans text-sm font-bold tracking-[0.05em] text-ff-red uppercase">
-          Next level in your club
+          One gym, endless vibes
         </p>
         <h2 className="mt-2 text-center font-heading text-[28px] italic uppercase text-black">
-          Your Training Areas
+          Your Classes
         </h2>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
@@ -48,7 +48,7 @@ export default function TrainingAreasSection() {
               <div className="relative h-full w-full overflow-hidden">
                 <Image
                   src={area.image}
-                  alt={`${area.name} training area`}
+                  alt={`${area.name} class at Anas Plus`}
                   fill
                   sizes="(min-width: 1024px) 20vw, (min-width: 640px) 50vw, 100vw"
                   className="origin-center scale-110 object-cover transition-transform duration-[400ms] group-hover:scale-100"

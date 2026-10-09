@@ -5,34 +5,33 @@ import type { FaqItem } from "@/types/content";
 const FAQ_ITEMS: FaqItem[] = [
   {
     number: "01",
-    question: "What does personal training cost?",
+    question: "What does personal coaching cost?",
     answer:
-      "Personal training helps you reach your goals faster and more effectively. Depending on your available time, budget, and goals, your personal trainer puts together a fully individual concept for you. Pricing is set independently by each coach.",
+      "Pricing depends on your goals, your schedule, and the club you train at. Call or message us at 53 266 222 and we'll walk you through the options for personal coaching and group classes together.",
   },
   {
     number: "02",
-    question: "How does a personal training session work?",
+    question: "How does a coaching session work?",
     answer:
-      "First, your personal trainer gets a clear picture of your fitness level, health, and athletic experience. Together, you then define your personal training goal based on your wishes and expectations. Your coach regularly accompanies and supports you during training and, if needed, creates an individual training plan. They're your competent point of contact for all training-related questions.",
+      "Your coach starts by getting to know your fitness level, your goals, and your availability. From there, we build a training plan around you — strength, cardio, Pilates, or a hybrid mix — and your coach stays with you every session to track progress and adjust as you improve.",
   },
   {
     number: "03",
-    question: "How can a personal trainer help me?",
+    question: "What's the difference between coaching and group classes?",
     answer:
-      "With a personal trainer, you reach your goals faster and more effectively. Your coach answers all your questions about training and nutrition. And best of all: they keep motivating you to push past your limits! Whether it's functional training or machine-based training, your personal trainer tailors your training individually to your wishes and starting point.",
+      "Personal coaching (Coaching perso) is one-on-one, fully built around your goals and pace. Group classes (Cours collectifs) — Pilates, Zumba, Spinning, Yoga and more — give you the energy of training with others, led by one of our coaches. Many members do both.",
   },
   {
     number: "04",
-    question:
-      "What does Fitness First offer in the area of personal training?",
+    question: "Do you offer women-only sessions?",
     answer:
-      "We work with qualified, self-employed personal trainers who offer a range of services that you can book directly. The offering, the training itself, and the terms and pricing are determined by the coach. In this case, the coach is the service provider — Fitness First has no influence over it.",
+      "Yes. Several of our weekly sessions — including cardio, abs, and yoga — run as 100% Femmes (women-only) classes, alongside our mixed sessions. Check the schedule at your club for exact times.",
   },
   {
     number: "05",
-    question: "Who is personal training suitable for?",
+    question: "Who is this for?",
     answer:
-      "Personal training is suitable for everyone. Whether you're a beginner or advanced: a professional coach helps you reach your goals faster and better, and helps you perform every exercise correctly. They become your personal point of contact for questions about training and nutrition. A coach is also a great motivator for those days when your inner couch potato takes over. Find the right trainer for you and your goals now!",
+      "Anyone — whether you're just getting started or you've been training for years. Our coaches meet you where you are and build from there, and our classes welcome every level, from first-timers to regulars.",
   },
 ];
 
@@ -42,8 +41,8 @@ export function FaqSection() {
       <div className="container mx-auto grid grid-cols-1 gap-12 md:grid-cols-2">
         <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[1/1.3]">
           <Image
-            src="/images/faq-training.jpg"
-            alt="Personal training leg press exercise"
+            src="/images/anasplus/class-pilates.jpg"
+            alt="Anas Plus member in a seated Pilates stretch"
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover"
@@ -52,7 +51,7 @@ export function FaqSection() {
 
         <div className="faq-list">
           <h2 className="mb-8 text-[32px] leading-[1.15] font-bold text-black uppercase not-italic font-heading">
-            Questions &amp; Answers About Personal Training
+            Questions &amp; Answers About Coaching
           </h2>
           <FaqAccordion items={FAQ_ITEMS} />
         </div>

@@ -4,9 +4,9 @@ import CityCarouselSection from "@/components/gyms/CityCarouselSection";
 import CtaSection from "@/components/CtaSection";
 
 export const metadata: Metadata = {
-  title: "Find a Gym",
+  title: "Our Clubs",
   description:
-    "Find a Fitness First gym near you. 224 clubs across Germany, with flexible RED and BLACK memberships.",
+    "Two Anas Plus clubs in Sfax - Bouzayen and Route Tunis - with personal coaching and group classes.",
 };
 
 export default function GymsPage() {

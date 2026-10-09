@@ -7,20 +7,20 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const UTILITY_LINKS = [
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "tel:53266222" },
   { label: "Careers", href: "/careers" },
-  { label: "Sport Trips", href: "/sport-trips" },
+  { label: "Events", href: "/events" },
   { label: "Member Login", href: "/member-login" },
 ];
 
 const NAV_LINKS = [
   { label: "Free Trial", href: "/free-trial" },
   { label: "Membership", href: "/membership" },
-  { label: "Gyms", href: "/gyms" },
-  { label: "Training", href: "/" },
+  { label: "Our Clubs", href: "/gyms" },
+  { label: "Personal Training", href: "/" },
   { label: "Classes", href: "/classes" },
-  { label: "HYROX", href: "/hyrox" },
-  { label: "Corporate Fitness", href: "/corporate-fitness" },
+  { label: "Pilates", href: "/pilates" },
+  { label: "Women Only", href: "/women-only" },
   { label: "Magazine", href: "/magazine" },
 ];
 
@@ -61,7 +61,7 @@ export default function SiteHeader() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white transition-colors duration-200 hover:text-ff-red"
+                className="text-white visited:text-white transition-colors duration-200 hover:text-ff-red"
               >
                 {link.label}
               </Link>
@@ -73,11 +73,11 @@ export default function SiteHeader() {
         <div className="mx-auto flex h-16 w-full max-w-[1440px] items-center justify-between px-8">
           <Link href="/" className="flex shrink-0 items-center">
             <Image
-              src="/images/logo-white.png"
-              alt="Fitness First"
-              width={590}
-              height={114}
-              className="h-7 w-auto"
+              src="/images/anasplus/logo-white.png"
+              alt="Anas Plus"
+              width={900}
+              height={505}
+              className="h-10 w-auto lg:h-12"
               priority
             />
           </Link>
@@ -89,7 +89,7 @@ export default function SiteHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="group relative flex h-16 items-center font-sans text-[15px] font-medium text-white"
+                  className="group relative flex h-16 items-center font-sans text-[15px] font-medium text-white visited:text-white"
                 >
                   {link.label}
                   <span
@@ -139,7 +139,7 @@ export default function SiteHeader() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className={`w-full border-b border-white/15 py-4 text-center font-heading text-[18px] font-bold not-italic normal-case text-white transition-colors duration-200 hover:text-ff-red ${
+              className={`w-full border-b border-white/15 py-4 text-center font-heading text-[18px] font-bold not-italic normal-case text-white visited:text-white transition-colors duration-200 hover:text-ff-red ${
                 pathname === link.href ? "text-ff-red" : ""
               }`}
             >
@@ -153,7 +153,7 @@ export default function SiteHeader() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="transition-colors duration-200 hover:text-ff-red"
+              className="text-white visited:text-white transition-colors duration-200 hover:text-ff-red"
             >
               {link.label}
             </Link>

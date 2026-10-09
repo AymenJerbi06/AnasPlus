@@ -2,14 +2,14 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 
 const CHECKLIST = [
-  "Premium clubs in prime locations",
-  "Daily group classes & small-group training",
-  "Spacious cardio, strength & mobility areas",
-  "Modern functional training zones & individual workouts",
-  "Large wellness areas to relax and recover",
-  "Dedicated support from qualified Fitness First coaches",
-  "Progress tracking in the Fitness First app",
-  "800+ online home workouts",
+  "Two clubs in Sfax: Bouzayen and Route Tunis",
+  "Personal coaching & daily group classes",
+  "Pilates, Zumba, Spinning, Yoga & CrossFit",
+  "Women-only (100% Femmes) sessions available",
+  "Modern strength, cardio & spin equipment",
+  "Dedicated, qualified Anas Plus coaches",
+  "Community events like Pilates Outdoor",
+  "A training plan built around your goals",
 ];
 
 export default function ClubExperienceSection() {
@@ -18,16 +18,17 @@ export default function ClubExperienceSection() {
       <div className="container mx-auto grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div className="relative aspect-[4/3] w-full overflow-hidden lg:aspect-[4/5]">
           <Image
-            src="/images/membership/club-experience.jpg"
-            alt="Inside a Fitness First club"
+            src="/images/anasplus/hero-main.jpg"
+            alt="Inside an Anas Plus club"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
+            style={{ objectPosition: "60% 15%" }}
           />
         </div>
         <div>
           <p className="font-sans text-sm font-bold tracking-[0.05em] text-ff-red uppercase">
-            12 premium clubs, close to you
+            Sfax, Tunisia
           </p>
           <h2 className="mt-2 font-heading text-[28px] italic uppercase text-black">
             What awaits you

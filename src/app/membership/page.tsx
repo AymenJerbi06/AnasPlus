@@ -11,7 +11,7 @@ import CtaSection from "@/components/CtaSection";
 export const metadata: Metadata = {
   title: "Membership & Pricing",
   description:
-    "Compare Fitness First RED and BLACK membership plans and find the right fit for your training goals.",
+    "Personal coaching or group classes at Anas Plus Fitness Club - find the way of training that fits you.",
 };
 
 export default function MembershipPage() {

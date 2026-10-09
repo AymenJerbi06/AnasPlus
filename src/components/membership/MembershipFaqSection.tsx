@@ -4,45 +4,39 @@ import type { FaqItem } from "@/types/content";
 const FAQ_ITEMS: FaqItem[] = [
   {
     number: "01",
-    question: "How are Fitness First's prices structured?",
+    question: "How is Anas Plus pricing structured?",
     answer:
-      "With a 24-month membership, you currently pay no signup fee. The 6-month training package costs €39 (or €49 at select clubs). As a RED member you pay from €5.90 per week; BLACK club membership starts from €17.90 per week.",
+      "Pricing depends on whether you choose personal coaching or group classes, your club, and your schedule. Call or message us at 53 266 222 and we'll find the right fit for your goals and budget.",
   },
   {
     number: "02",
-    question: "What is the difference between Fitness First RED and BLACK?",
+    question: "What's the difference between the two clubs?",
     answer:
-      "Fitness First RED focuses on the essentials: effective, individual training with excellent value for money. Fitness First BLACK is high-end fitness at the highest level, with spacious wellness areas, exclusive services, and more comprehensive coaching support. Availability depends on your chosen club.",
+      "Anas Plus Bouzayen and Anas Plus Route Tunis each run their own weekly class schedule — Pilates, Zumba, Spinning, Yoga, CrossFit and more. Both offer personal coaching and women-only sessions. Ask us which schedule fits you best.",
   },
   {
     number: "03",
-    question: "Does Fitness First offer day or week passes?",
+    question: "Can I try a class before signing up?",
     answer:
-      "Yes. A RED day pass is €19, and a RED week pass is €49. For BLACK clubs, a day pass is €29 and a week pass is €79. Day and week passes can be purchased directly at the club.",
+      "Yes — we regularly run open days and trial sessions. Follow @anasplusbouzayen or @anasplus_rte_tunis on Instagram, or call us directly, to find out when the next one is.",
   },
   {
     number: "04",
-    question: "What is the training package?",
+    question: "Are the group classes beginner-friendly?",
     answer:
-      "The Fitness First training package includes a fitness assessment and body analysis twice a year, plus a personal training plan built around your individual goals and preferences.",
+      "Absolutely. Whether it's your first Zumba class or your hundredth CrossFit session, our coaches adapt the intensity to the room. No experience needed to join in.",
   },
   {
     number: "05",
-    question: "I'm already a member elsewhere. Do you have special offers?",
+    question: "Do you offer women-only sessions?",
     answer:
-      "Switching to Fitness First is quick and easy. Depending on the remaining term of your current membership, we'll cover up to 12 months of membership fees when you switch.",
+      "Yes — several sessions each week (cardio, abs, yoga and more) run as 100% Femmes classes, in addition to our mixed sessions.",
   },
   {
     number: "06",
-    question: "Can I transfer my membership to someone else?",
+    question: "How do I pause or cancel my membership?",
     answer:
-      "Membership is tied to the contract holder and cannot be transferred to another person.",
-  },
-  {
-    number: "07",
-    question: "How do I cancel my membership?",
-    answer:
-      "If you've decided to leave Fitness First, you can end your membership through our membership cancellation page, or by contacting your Home Club's service team directly.",
+      "Contact your Home Club directly, in person or by phone at 53 266 222, and our team will take care of it.",
   },
 ];
 

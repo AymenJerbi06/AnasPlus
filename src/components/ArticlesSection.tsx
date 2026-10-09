@@ -3,25 +3,25 @@ import type { ArticleCard } from "@/types/content";
 
 const ARTICLES: ArticleCard[] = [
   {
-    image: "/images/article-trainingsplan.jpg",
-    title: "Creating a training plan – here's how to do it right!",
+    image: "/images/anasplus/article-pilates-1.jpg",
+    title: "Pilates at Anas Plus: everything you need to know",
     excerpt:
-      "Tips for your personal fitness plan: preparation, content & scope. Examples for muscle building, weight loss & endurance.",
-    href: "/magazine/training-plan",
+      "Strength, balance, posture & control — why Pilates deserves a place in your weekly routine, and what a session actually looks like.",
+    href: "/magazine/pilates-guide",
   },
   {
-    image: "/images/article-muskelaufbau.jpg",
-    title: "Building muscle with age: tips & training plan from 50",
+    image: "/images/anasplus/class-zumba.jpg",
+    title: "Zumba at Anas Plus: energy, music, motivation",
     excerpt:
-      "From age 30, building muscle gets harder. Find out here how to train for muscle growth correctly as a best-ager over 50, and what's different for women!",
-    href: "/magazine/muscle-building-over-50",
+      "Ambiance explosive et bonne humeur garantie. Dance it, feel it, sweat it — no two Zumba sessions are ever quite the same.",
+    href: "/magazine/zumba",
   },
   {
-    image: "/images/article-rekomposition.jpg",
-    title: "Body recomposition: losing fat and building muscle at the same time?",
+    image: "/images/anasplus/hero-group.jpg",
+    title: "Why training together makes you stronger",
     excerpt:
-      "Find out whether it's really possible to lose fat and build muscle at the same time, and how body recomposition works.",
-    href: "/magazine/body-recomposition",
+      "Group classes bring more motivation, more accountability, and more energy. Here's what it feels like to train as a team at Anas Plus.",
+    href: "/magazine/train-together",
   },
 ];
 
@@ -30,7 +30,7 @@ export function ArticlesSection() {
     <section className="bg-white px-8 py-16">
       <div className="container mx-auto">
         <h2 className="font-sans text-[28px] font-bold not-italic normal-case text-black">
-          Top 3 articles on personal training
+          From the Anas Plus magazine
         </h2>
 
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">

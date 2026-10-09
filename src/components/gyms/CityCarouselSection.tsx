@@ -4,22 +4,29 @@ import { useRef } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-type City = {
+type Club = {
+  id: string;
   name: string;
-  count: number;
+  tagline: string;
   image: string;
   href: string;
 };
 
-const CITIES: City[] = [
-  { name: "Berlin", count: 15, image: "/images/gyms/berlin.webp", href: "/gyms/berlin" },
-  { name: "Frankfurt am Main", count: 12, image: "/images/gyms/frankfurt.webp", href: "/gyms/frankfurt" },
-  { name: "Darmstadt", count: 10, image: "/images/gyms/darmstadt.jpg", href: "/gyms/darmstadt" },
-  { name: "Düsseldorf", count: 5, image: "/images/gyms/duesseldorf.webp", href: "/gyms/duesseldorf" },
-  { name: "Bremen", count: 3, image: "/images/gyms/bremen.webp", href: "/gyms/bremen" },
-  { name: "Dresden", count: 3, image: "/images/gyms/dresden.webp", href: "/gyms/dresden" },
-  { name: "Bielefeld", count: 2, image: "/images/gyms/bielefeld.webp", href: "/gyms/bielefeld" },
-  { name: "Göttingen", count: 2, image: "/images/gyms/goettingen.webp", href: "/gyms/goettingen" },
+const CLUBS: Club[] = [
+  {
+    id: "bouzayen",
+    name: "Anas Plus Bouzayen",
+    tagline: "Personal coaching, CrossFit, Pilates & more",
+    image: "/images/anasplus/class-strength.jpg",
+    href: "/gyms/bouzayen",
+  },
+  {
+    id: "rte-tunis",
+    name: "Anas Plus Route Tunis",
+    tagline: "Spinning, Cardio Sunset, group classes & coaching",
+    image: "/images/anasplus/hero-main.jpg",
+    href: "/gyms/rte-tunis",
+  },
 ];
 
 export default function CityCarouselSection() {
@@ -33,13 +40,13 @@ export default function CityCarouselSection() {
     <section className="bg-white px-6 py-12 lg:px-8">
       <div className="container mx-auto">
         <h2 className="text-center font-heading text-[28px] italic uppercase text-black">
-          Discover All Cities
+          Our Clubs
         </h2>
 
         <div className="relative mt-8">
           <button
             type="button"
-            aria-label="Previous cities"
+            aria-label="Previous clubs"
             onClick={() => scrollBy(-1)}
             className="absolute top-1/2 -left-2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center bg-ff-red text-white transition-colors duration-200 hover:bg-ff-red-dark sm:flex"
           >
@@ -48,29 +55,39 @@ export default function CityCarouselSection() {
 
           <div
             ref={scrollerRef}
-            className="flex gap-4 overflow-x-auto scroll-smooth px-1 pb-2 [scrollbar-width:thin]"
+            className="flex justify-center gap-4 overflow-x-auto scroll-smooth px-1 pb-2 [scrollbar-width:thin]"
           >
-            {CITIES.map((city) => (
+            {CLUBS.map((club) => (
               <a
-                key={city.name}
-                href={city.href}
-                className="group relative h-[400px] w-[228px] shrink-0 overflow-hidden"
+                key={club.id}
+                id={club.id}
+                href={club.href}
+                className="group relative h-[400px] w-[260px] shrink-0 overflow-hidden scroll-mt-32"
               >
                 <Image
-                  src={city.image}
-                  alt={`Fitness First clubs in ${city.name}`}
+                  src={club.image}
+                  alt={club.name}
                   fill
-                  sizes="228px"
+                  sizes="260px"
                   className="object-cover transition-transform duration-[400ms] group-hover:scale-105"
+                  style={{
+                    objectPosition:
+                      club.id === "rte-tunis" ? "60% 15%" : "center 25%",
+                  }}
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
                 />
                 <div className="absolute inset-x-0 bottom-0 p-4">
-                  <p className="font-sans text-xl font-bold text-white">{city.name}</p>
-                  <span className="mt-1 inline-flex items-center gap-1 font-sans text-sm text-white">
-                    {city.count} {city.count === 1 ? "studio" : "studios"}
+                  <p className="font-sans text-xl font-bold text-white">
+                    {club.name}
+                  </p>
+                  <span className="mt-1 flex items-center gap-1 font-sans text-sm text-white">
+                    {club.tagline}
+                  </span>
+                  <span className="mt-2 inline-flex items-center gap-1 font-sans text-sm font-bold text-white">
+                    See schedule
                     <ChevronRight className="h-4 w-4" />
                   </span>
                 </div>
@@ -80,7 +97,7 @@ export default function CityCarouselSection() {
 
           <button
             type="button"
-            aria-label="Next cities"
+            aria-label="Next clubs"
             onClick={() => scrollBy(1)}
             className="absolute top-1/2 -right-2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center bg-ff-red text-white transition-colors duration-200 hover:bg-ff-red-dark sm:flex"
           >
@@ -90,10 +107,10 @@ export default function CityCarouselSection() {
 
         <p className="mt-8 text-center">
           <a
-            href="/gyms/all"
+            href="tel:53266222"
             className="font-sans text-[15px] text-black underline underline-offset-2"
           >
-            View all 224 locations
+            Call 53 266 222 for directions or schedules
           </a>
         </p>
       </div>

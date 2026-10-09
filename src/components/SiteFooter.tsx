@@ -1,12 +1,6 @@
 import Link from "next/link";
 import type { ComponentType, SVGProps } from "react";
-import {
-  FacebookIcon,
-  InstagramIcon,
-  YoutubeIcon,
-  TiktokIcon,
-  WhatsappIcon,
-} from "@/components/icons";
+import { InstagramIcon, WhatsappIcon } from "@/components/icons";
 
 type FooterLink = {
   label: string;
@@ -20,33 +14,28 @@ type FooterColumn = {
 
 const footerColumns: FooterColumn[] = [
   {
-    heading: "Company",
+    heading: "Anas Plus",
     links: [
       { label: "About us", href: "/about" },
-      { label: "Press", href: "/press" },
+      { label: "Our Clubs", href: "/gyms" },
+      { label: "Magazine", href: "/magazine" },
     ],
   },
   {
     heading: "Careers",
     links: [
-      { label: "Careers at Fitness First", href: "/careers" },
-      { label: "FF as an employer", href: "/careers/employer" },
-      { label: "Jobs", href: "/jobs" },
-      { label: "Partnerships", href: "/partnerships" },
-      { label: "Become a personal trainer", href: "/become-a-trainer" },
-      { label: "Training", href: "/training-jobs" },
+      { label: "Become a Coach", href: "/careers" },
+      { label: "Join the Team", href: "/careers/jobs" },
     ],
   },
   {
     heading: "Service",
     links: [
-      { label: "News", href: "/news" },
       { label: "Contact", href: "/contact" },
       { label: "FAQ's", href: "/faq" },
       { label: "Member Login", href: "/member-login" },
-      { label: "Pause your membership here", href: "/pause-membership" },
-      { label: "Cancel your membership here", href: "/cancel-membership" },
-      { label: "Right of withdrawal", href: "/withdrawal" },
+      { label: "Pause your membership", href: "/pause-membership" },
+      { label: "Cancel your membership", href: "/cancel-membership" },
       { label: "Cookie settings", href: "/cookie-settings" },
     ],
   },
@@ -60,28 +49,18 @@ type SocialLink = {
 
 const socialLinks: SocialLink[] = [
   {
-    label: "Facebook",
-    href: "https://facebook.com/FitnessFirstGER",
-    Icon: FacebookIcon,
-  },
-  {
-    label: "Instagram",
-    href: "https://instagram.com/fitnessfirstger",
+    label: "Instagram – Anas Plus Bouzayen",
+    href: "https://instagram.com/anasplusbouzayen",
     Icon: InstagramIcon,
   },
   {
-    label: "YouTube",
-    href: "https://youtube.com/user/FitnessFirstGER",
-    Icon: YoutubeIcon,
-  },
-  {
-    label: "TikTok",
-    href: "https://tiktok.com/@fitnessfirstgermany",
-    Icon: TiktokIcon,
+    label: "Instagram – Anas Plus Route Tunis",
+    href: "https://instagram.com/anasplus_rte_tunis",
+    Icon: InstagramIcon,
   },
   {
     label: "WhatsApp",
-    href: "https://whatsapp.com/channel/0029VaHULFw2P59bBi0r6Y3y",
+    href: "https://wa.me/21653266222",
     Icon: WhatsappIcon,
   },
 ];
@@ -131,19 +110,13 @@ export default function SiteFooter() {
 
       <div className="mt-8 border-t border-[#d5d5d5]">
         <div className="container mx-auto flex flex-col items-center justify-between gap-3 py-5 text-xs text-ff-graphit sm:flex-row">
-          <p>© Fitness First Germany GmbH 2026</p>
+          <p>© Anas Plus Fitness Club 2026</p>
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1">
             <Link href="/terms" className="hover:underline">
               Terms &amp; Conditions
             </Link>
             <Link href="/privacy" className="hover:underline">
               Privacy Policy
-            </Link>
-            <Link href="/imprint" className="hover:underline">
-              Imprint
-            </Link>
-            <Link href="/accessibility" className="hover:underline">
-              Accessibility Statement
             </Link>
           </div>
         </div>
