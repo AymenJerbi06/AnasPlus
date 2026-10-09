@@ -1,21 +1,35 @@
-export default function CtaSection() {
+type CtaSectionProps = {
+  heading?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+};
+
+export default function CtaSection({
+  heading = "Ready to get started? Book your first personal training session now!",
+  primaryLabel = "FIND A TRAINER NOW",
+  primaryHref = "#form",
+  secondaryLabel = "BOOK AN APPOINTMENT",
+  secondaryHref = "/contact",
+}: CtaSectionProps) {
   return (
     <section className="bg-black px-8 py-16 text-center">
       <h2 className="mx-auto mb-8 max-w-[560px] font-sans text-[18px] font-bold text-white not-italic normal-case sm:text-[22px]">
-        Ready to get started? Book your first personal training session now!
+        {heading}
       </h2>
       <div className="flex flex-col items-center justify-center gap-6">
         <a
-          href="#form"
+          href={primaryHref}
           className="inline-block rounded-none border-2 border-ff-red bg-ff-red px-6 py-[14px] font-heading text-[16px] italic uppercase text-white transition-colors duration-200 ease-out hover:border-ff-red-dark hover:bg-ff-red-dark"
         >
-          FIND A TRAINER NOW
+          {primaryLabel}
         </a>
         <a
-          href="/contact"
+          href={secondaryHref}
           className="inline-block rounded-none border-2 border-ff-disabled px-6 py-[14px] font-heading text-[16px] italic uppercase text-ff-disabled"
         >
-          BOOK AN APPOINTMENT
+          {secondaryLabel}
         </a>
       </div>
     </section>
