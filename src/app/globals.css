@@ -11,8 +11,12 @@
   --font-mono: var(--font-sans);
   --font-heading: var(--font-heading);
   --color-ff-red: var(--ff-red);
+  --color-ff-red-dark: var(--ff-red-dark);
   --color-ff-black: var(--ff-black);
   --color-ff-footer: var(--ff-footer);
+  --color-ff-graphit: var(--ff-graphit);
+  --color-ff-disabled: var(--ff-disabled);
+  --color-ff-medium-grey: var(--ff-medium-grey);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -52,10 +56,14 @@
 }
 
 :root {
-  /* Fitness First brand tokens (extracted via getComputedStyle) */
+  /* Fitness First brand tokens (extracted via getComputedStyle / CSS custom properties on the live site) */
   --ff-red: #d6002a;
+  --ff-red-dark: #b1112e;
   --ff-black: #000000;
   --ff-footer: #ececed;
+  --ff-graphit: #3e3d40;
+  --ff-disabled: #c6c7c8;
+  --ff-medium-grey: #707172;
 
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

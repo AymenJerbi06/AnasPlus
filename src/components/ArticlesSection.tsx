@@ -33,32 +33,35 @@ export function ArticlesSection() {
           Top 3 articles on personal training
         </h2>
 
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
+        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
           {ARTICLES.map((article) => (
-            <article key={article.href} className="flex flex-col">
-              <div className="relative aspect-[4/3] w-full overflow-hidden border border-[#eee]">
+            <a
+              key={article.href}
+              href={article.href}
+              className="group relative flex h-[480px] flex-col overflow-hidden border border-[#9c9e9f] bg-white transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)]"
+            >
+              <div className="relative h-full w-full overflow-hidden">
                 <Image
                   src={article.image}
                   alt={article.title}
                   fill
                   sizes="(min-width: 768px) 33vw, 100vw"
-                  className="object-cover transition-opacity duration-200 hover:opacity-90"
+                  className="origin-center scale-110 object-cover transition-transform duration-[400ms] group-hover:scale-100"
                 />
               </div>
 
-              <h3 className="mt-4 font-sans text-lg font-bold leading-[1.3] text-black">
-                {article.title}
-              </h3>
-
-              <p className="mt-2 text-sm text-gray-600">{article.excerpt}</p>
-
-              <a
-                href={article.href}
-                className="mt-2 inline-block text-sm font-medium text-black transition-colors hover:text-ff-red"
-              >
-                Read more ›
-              </a>
-            </article>
+              <div className="absolute inset-x-0 bottom-0 z-10 bg-white p-4">
+                <h3 className="mb-4 font-sans text-xl leading-6 font-normal not-italic normal-case text-black">
+                  {article.title}
+                </h3>
+                <p className="line-clamp-3 font-sans text-sm leading-[21px] text-ff-graphit">
+                  {article.excerpt}
+                </p>
+                <span className="mt-2 inline-flex items-center gap-1 font-sans text-sm text-black">
+                  Read more ›
+                </span>
+              </div>
+            </a>
           ))}
         </div>
       </div>

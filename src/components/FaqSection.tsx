@@ -56,11 +56,12 @@ export function FaqSection() {
   return (
     <section className="bg-white px-8 py-16">
       <div className="container mx-auto grid grid-cols-1 gap-12 md:grid-cols-2">
-        <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[1/1.3] md:w-[45%]">
+        <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[1/1.3]">
           <Image
             src="/images/faq-training.jpg"
             alt="Personal training leg press exercise"
             fill
+            sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover"
           />
         </div>

@@ -1,25 +1,26 @@
-import SiteHeader from "@/components/SiteHeader";
+import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import BookingStepsSection from "@/components/BookingStepsSection";
 import FaqSection from "@/components/FaqSection";
 import VideoSection from "@/components/VideoSection";
 import ArticlesSection from "@/components/ArticlesSection";
 import CtaSection from "@/components/CtaSection";
-import SiteFooter from "@/components/SiteFooter";
+
+export const metadata: Metadata = {
+  title: "Personal Training",
+  description:
+    "Maximum results with personal coaching - individual, flexible, motivating.",
+};
 
 export default function Home() {
   return (
     <>
-      <SiteHeader />
-      <main className="flex-1">
-        <HeroSection />
-        <BookingStepsSection />
-        <FaqSection />
-        <VideoSection />
-        <ArticlesSection />
-        <CtaSection />
-      </main>
-      <SiteFooter />
+      <HeroSection />
+      <BookingStepsSection />
+      <FaqSection />
+      <VideoSection />
+      <ArticlesSection />
+      <CtaSection />
     </>
   );
 }

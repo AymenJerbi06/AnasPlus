@@ -7,13 +7,13 @@ export default function CtaSection() {
       <div className="flex flex-col items-center justify-center gap-6">
         <a
           href="#form"
-          className="inline-block rounded-none border-2 border-ff-red bg-ff-red px-6 py-[14px] font-heading text-[16px] italic uppercase text-white hover:brightness-110"
+          className="inline-block rounded-none border-2 border-ff-red bg-ff-red px-6 py-[14px] font-heading text-[16px] italic uppercase text-white transition-colors duration-200 ease-out hover:border-ff-red-dark hover:bg-ff-red-dark"
         >
           FIND A TRAINER NOW
         </a>
         <a
           href="/contact"
-          className="inline-block rounded-none border-2 border-[#4a4a4a] px-6 py-[14px] font-heading text-[16px] italic uppercase text-[#8a8a8a] hover:border-white hover:text-white"
+          className="inline-block rounded-none border-2 border-ff-disabled px-6 py-[14px] font-heading text-[16px] italic uppercase text-ff-disabled"
         >
           BOOK AN APPOINTMENT
         </a>

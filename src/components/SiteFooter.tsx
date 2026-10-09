@@ -120,11 +120,31 @@ export default function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-black text-white hover:opacity-80"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-black text-white transition-colors duration-200 hover:bg-ff-graphit"
               >
                 <Icon className="h-5 w-5" />
               </a>
             ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-8 border-t border-[#d5d5d5]">
+        <div className="container mx-auto flex flex-col items-center justify-between gap-3 py-5 text-xs text-ff-graphit sm:flex-row">
+          <p>© Fitness First Germany GmbH 2026</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1">
+            <Link href="/terms" className="hover:underline">
+              Terms &amp; Conditions
+            </Link>
+            <Link href="/privacy" className="hover:underline">
+              Privacy Policy
+            </Link>
+            <Link href="/imprint" className="hover:underline">
+              Imprint
+            </Link>
+            <Link href="/accessibility" className="hover:underline">
+              Accessibility Statement
+            </Link>
           </div>
         </div>
       </div>

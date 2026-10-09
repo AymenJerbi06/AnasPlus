@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+import BackToTop from "@/components/BackToTop";
 
 const sohoBold = localFont({
   src: [
@@ -21,7 +24,10 @@ const sohoGothic = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Personal Training | AnasPlus",
+  title: {
+    default: "Fitness First | AnasPlus",
+    template: "%s | Fitness First",
+  },
   description:
     "Maximum results with personal coaching - individual, flexible, motivating.",
 };
@@ -33,7 +39,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${sohoBold.variable} ${sohoGothic.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        {children}
+        <SiteHeader />
+        <main className="flex-1">{children}</main>
+        <SiteFooter />
+        <BackToTop />
       </body>
     </html>
   );
