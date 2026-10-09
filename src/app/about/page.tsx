@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import CtaSection from "@/components/CtaSection";
 
+const STATS = [
+  { value: "2", label: "Clubs in Sfax" },
+  { value: "5+", label: "Weekly classes" },
+  { value: "14K+", label: "Instagram community" },
+  { value: "600+", label: "At our first Pilates Outdoor" },
+];
+
 export const metadata: Metadata = {
   title: "About Us",
   description:
@@ -53,6 +60,56 @@ export default function AboutPage() {
             throughout the year we bring the community together for events
             like Pilates Outdoor.
           </p>
+        </div>
+      </section>
+
+      <section className="bg-black px-6 py-14 lg:px-8">
+        <div className="container mx-auto grid grid-cols-2 gap-8 text-center sm:grid-cols-4">
+          {STATS.map((stat) => (
+            <div key={stat.label}>
+              <p className="font-heading text-[32px] italic text-ff-red">
+                {stat.value}
+              </p>
+              <p className="mt-1 font-sans text-sm text-white">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-16 lg:px-8">
+        <div className="container mx-auto grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="relative aspect-[4/3] w-full overflow-hidden">
+            <Image
+              src="/images/anasplus/class-strength.jpg"
+              alt="Anas Plus coach guiding a member"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <p className="font-sans text-sm font-bold tracking-[0.05em] text-ff-red uppercase">
+              Our coaches
+            </p>
+            <h2 className="mt-2 font-heading text-[26px] italic uppercase text-black">
+              Led By People Who Train Here Too
+            </h2>
+            <p className="mt-4 font-sans text-[16px] leading-[1.6] text-ff-graphit">
+              Every Anas Plus coach is qualified across the classes they
+              teach, from personal coaching to Pilates, Zumba, Spinning,
+              Yoga and CrossFit. They know the regulars by name, adapt
+              every session to the room, and show up with the same energy
+              whether it's your first class or your five hundredth.
+            </p>
+            <a
+              href="/personal-training#video"
+              className="mt-6 inline-block border-2 border-black bg-black px-5 py-3 font-heading text-[15px] italic uppercase text-white transition-colors duration-200 hover:border-ff-graphit hover:bg-ff-graphit"
+            >
+              Meet Coach Anas
+            </a>
+          </div>
         </div>
       </section>
 

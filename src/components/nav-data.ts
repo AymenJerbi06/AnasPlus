@@ -84,11 +84,11 @@ export const NAV_LINKS: NavItem[] = [
     columns: [
       [
         { label: "All Articles", href: "/magazine" },
-        { label: "Pilates Guide", href: "/magazine#pilates-guide" },
+        { label: "Training", href: "/magazine#training" },
       ],
       [
-        { label: "Zumba", href: "/magazine#zumba" },
-        { label: "Train Together", href: "/magazine#train-together" },
+        { label: "Nutrition", href: "/magazine#nutrition" },
+        { label: "Community", href: "/magazine#community" },
       ],
     ],
   },

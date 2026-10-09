@@ -48,6 +48,35 @@ export default function WomenOnlyPage() {
       </section>
 
       <section className="bg-white px-6 py-16 lg:px-8">
+        <div className="container mx-auto grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <p className="font-sans text-sm font-bold tracking-[0.05em] text-ff-red uppercase">
+              Fortes. Résilientes. Inarrêtables.
+            </p>
+            <h2 className="mt-2 font-heading text-[26px] italic uppercase text-black">
+              A Space Built for You
+            </h2>
+            <p className="mt-4 font-sans text-[16px] leading-[1.6] text-ff-graphit">
+              Our women-only sessions were built around one idea: everyone
+              should feel comfortable showing up to train. Whether you're
+              brand new to the gym or you've been training for years, these
+              classes give you the same coaching, the same energy, and the
+              same results — in a space built just for you.
+            </p>
+          </div>
+          <div className="relative aspect-[4/3] w-full overflow-hidden">
+            <Image
+              src="/images/anasplus/class-pilates.jpg"
+              alt="Women-only Pilates session at Anas Plus"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-ff-footer px-6 py-16 lg:px-8">
         <div className="container mx-auto max-w-[640px] text-center">
           <h2 className="font-heading text-[28px] italic uppercase text-black">
             What&apos;s included
