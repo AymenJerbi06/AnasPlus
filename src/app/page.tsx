@@ -1,32 +1,26 @@
 import type { Metadata } from "next";
-import HeroSection from "@/components/HeroSection";
-import BookingStepsSection from "@/components/BookingStepsSection";
-import FaqSection from "@/components/FaqSection";
-import VideoSection from "@/components/VideoSection";
+import HomeHeroSlider from "@/components/home/HomeHeroSlider";
+import DiscoverSection from "@/components/home/DiscoverSection";
+import PopularClassesSection from "@/components/home/PopularClassesSection";
+import FreeTrialBanner from "@/components/home/FreeTrialBanner";
 import ArticlesSection from "@/components/ArticlesSection";
-import CtaSection from "@/components/CtaSection";
+import CityCarouselSection from "@/components/gyms/CityCarouselSection";
 
 export const metadata: Metadata = {
-  title: "Personal Training | Anas Plus",
+  title: "Anas Plus Fitness Club",
   description:
-    "Personal coaching at Anas Plus Fitness Club - individual, flexible, built around your goals.",
+    "Anas Plus Fitness Club - personal coaching, Pilates, Zumba, Spinning and more across two clubs in Sfax.",
 };
 
 export default function Home() {
   return (
     <>
-      <HeroSection />
-      <BookingStepsSection />
-      <FaqSection />
-      <VideoSection />
+      <HomeHeroSlider />
+      <DiscoverSection />
+      <PopularClassesSection />
+      <FreeTrialBanner />
       <ArticlesSection />
-      <CtaSection
-        heading="Ready to get started? Call us and book your first session today!"
-        primaryLabel="CALL 53 266 222"
-        primaryHref="tel:53266222"
-        secondaryLabel="MESSAGE US ON INSTAGRAM"
-        secondaryHref="https://instagram.com/anasplusbouzayen"
-      />
+      <CityCarouselSection />
     </>
   );
 }

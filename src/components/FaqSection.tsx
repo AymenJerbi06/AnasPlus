@@ -37,7 +37,7 @@ const FAQ_ITEMS: FaqItem[] = [
 
 export function FaqSection() {
   return (
-    <section className="bg-white px-8 py-16">
+    <section id="faq" className="scroll-mt-28 bg-white px-8 py-16">
       <div className="container mx-auto grid grid-cols-1 gap-12 md:grid-cols-2">
         <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[1/1.3]">
           <Image

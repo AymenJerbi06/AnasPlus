@@ -11,7 +11,7 @@ const LOCATIONS = [
 
 export function BookingStepsSection() {
   return (
-    <section id="form" className="bg-ff-black px-8 py-16">
+    <section id="form" className="scroll-mt-28 bg-ff-black px-8 py-16">
       <div className="container mx-auto">
         <h2 className="mb-12 font-sans text-2xl font-bold not-italic normal-case text-white">
           Book your first session now! Here&apos;s how:

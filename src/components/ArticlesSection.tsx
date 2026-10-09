@@ -7,21 +7,21 @@ const ARTICLES: ArticleCard[] = [
     title: "Pilates at Anas Plus: everything you need to know",
     excerpt:
       "Strength, balance, posture & control — why Pilates deserves a place in your weekly routine, and what a session actually looks like.",
-    href: "/magazine/pilates-guide",
+    href: "/magazine#pilates-guide",
   },
   {
     image: "/images/anasplus/class-zumba.jpg",
     title: "Zumba at Anas Plus: energy, music, motivation",
     excerpt:
       "Ambiance explosive et bonne humeur garantie. Dance it, feel it, sweat it — no two Zumba sessions are ever quite the same.",
-    href: "/magazine/zumba",
+    href: "/magazine#zumba",
   },
   {
     image: "/images/anasplus/hero-group.jpg",
     title: "Why training together makes you stronger",
     excerpt:
       "Group classes bring more motivation, more accountability, and more energy. Here's what it feels like to train as a team at Anas Plus.",
-    href: "/magazine/train-together",
+    href: "/magazine#train-together",
   },
 ];
 

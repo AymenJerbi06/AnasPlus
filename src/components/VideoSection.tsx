@@ -1,6 +1,6 @@
 export default function VideoSection() {
   return (
-    <section className="bg-white px-4 py-16 text-center sm:px-8">
+    <section id="video" className="scroll-mt-28 bg-white px-4 py-16 text-center sm:px-8">
       <h2 className="font-sans text-[22px] font-bold text-black md:text-[28px]">
         What can I expect from coaching at Anas Plus?
       </h2>

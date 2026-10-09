@@ -36,7 +36,7 @@ const PLANS: Plan[] = [
 
 export default function PricingSection() {
   return (
-    <section id="plans" className="bg-white px-6 py-16 lg:px-8">
+    <section id="plans" className="scroll-mt-28 bg-white px-6 py-16 lg:px-8">
       <div className="container mx-auto">
         <h2 className="text-center font-sans text-[28px] font-bold not-italic normal-case text-black">
           Choose how you train

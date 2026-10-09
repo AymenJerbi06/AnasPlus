@@ -25,7 +25,7 @@ const footerColumns: FooterColumn[] = [
     heading: "Careers",
     links: [
       { label: "Become a Coach", href: "/careers" },
-      { label: "Join the Team", href: "/careers/jobs" },
+      { label: "Join the Team", href: "/careers#jobs" },
     ],
   },
   {
@@ -34,8 +34,8 @@ const footerColumns: FooterColumn[] = [
       { label: "Contact", href: "/contact" },
       { label: "FAQ's", href: "/faq" },
       { label: "Member Login", href: "/member-login" },
-      { label: "Pause your membership", href: "/pause-membership" },
-      { label: "Cancel your membership", href: "/cancel-membership" },
+      { label: "Pause your membership", href: "/contact#membership" },
+      { label: "Cancel your membership", href: "/contact#membership" },
       { label: "Cookie settings", href: "/cookie-settings" },
     ],
   },
@@ -77,7 +77,7 @@ export default function SiteFooter() {
               </h4>
               {column.links.map((link) => (
                 <Link
-                  key={link.href}
+                  key={link.label}
                   href={link.href}
                   className="block text-[15px] leading-[2.2] text-black hover:underline"
                 >
