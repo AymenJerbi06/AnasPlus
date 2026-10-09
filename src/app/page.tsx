@@ -7,7 +7,7 @@ import ArticlesSection from "@/components/ArticlesSection";
 import CtaSection from "@/components/CtaSection";
 
 export const metadata: Metadata = {
-  title: "Personal Training",
+  title: "Personal Training | Anas Plus",
   description:
     "Personal coaching at Anas Plus Fitness Club - individual, flexible, built around your goals.",
 };
