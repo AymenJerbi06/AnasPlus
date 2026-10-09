@@ -9,7 +9,7 @@ export default function HeroSection() {
         fill
         priority
         className="object-cover"
-        style={{ objectPosition: "20% center" }}
+        style={{ objectPosition: "60% 12%" }}
       />
       <div
         aria-hidden="true"
