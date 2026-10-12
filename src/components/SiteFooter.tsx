@@ -18,6 +18,7 @@ const footerColumns: FooterColumn[] = [
     links: [
       { label: "About us", href: "/about" },
       { label: "Our Clubs", href: "/gyms" },
+      { label: "Facilities & Equipment", href: "/facilities" },
       { label: "Magazine", href: "/magazine" },
     ],
   },
@@ -32,8 +33,8 @@ const footerColumns: FooterColumn[] = [
     heading: "Service",
     links: [
       { label: "Contact", href: "/contact" },
+      { label: "Membership & Pricing", href: "/membership" },
       { label: "FAQ's", href: "/faq" },
-      { label: "Member Login", href: "/member-login" },
       { label: "Pause your membership", href: "/contact#membership" },
       { label: "Cancel your membership", href: "/contact#membership" },
       { label: "Cookie settings", href: "/cookie-settings" },
@@ -49,12 +50,12 @@ type SocialLink = {
 
 const socialLinks: SocialLink[] = [
   {
-    label: "Instagram – Anas Plus Bouzayen",
+    label: "Instagram – Anas Plus Bouzayen · Sfax",
     href: "https://instagram.com/anasplusbouzayen",
     Icon: InstagramIcon,
   },
   {
-    label: "Instagram – Anas Plus Route Tunis",
+    label: "Instagram – Anas Plus Route Tunis · Tunis",
     href: "https://instagram.com/anasplus_rte_tunis",
     Icon: InstagramIcon,
   },
@@ -67,7 +68,7 @@ const socialLinks: SocialLink[] = [
 
 export default function SiteFooter() {
   return (
-    <footer className="bg-ff-footer px-8 pt-12 pb-8">
+    <footer className="bg-ff-footer px-6 pt-12 pb-8 sm:px-8">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-8 border-b border-[#d5d5d5] pb-8 md:grid-cols-3 md:gap-16">
           {footerColumns.map((column) => (

@@ -17,7 +17,7 @@ const ARTICLES = [
     image: "/images/anasplus/article-pilates-1.jpg",
     title: "Pilates at Anas Plus: everything you need to know",
     body: [
-      "Doux en apparence, puissant en réalité — Pilates transforms your body from the inside out. Built on precise, controlled movements, it strengthens your deep muscles while improving posture and mobility.",
+      "Pilates pairs precise, controlled movement with work on balance, posture and mobility. Recent Anas Plus sessions have included the Combo Chair.",
       "At Anas Plus, sessions run on the mat and the Combo Chair, with coaches adjusting the intensity to your level. Whether you're brand new to Pilates or a regular, you'll leave every session feeling stronger, more aligned, and more in control of your body.",
     ],
   },
@@ -28,37 +28,37 @@ const ARTICLES = [
     title: "Training myths that might be holding you back",
     body: [
       "Still believe you need hours in the gym to see results? Or that cardio is the only way to lose fat? A lot of the advice floating around is outdated — and it's often exactly what's keeping people from progressing.",
-      "Our coaches hear these myths every week. The fix isn't more effort, it's understanding what you're actually doing and why. Ask your coach to walk you through your program at your next session — once you understand the 'why', real progress follows.",
+      "Common questions include how much training is enough and how to combine strength and cardio. Ask a coach to explain the options that fit your goals and experience.",
     ],
   },
   {
     id: "arm-toning",
     category: "Training",
     image: "/images/anasplus/magazine/arm-toning.jpg",
-    title: "4 simple exercises to tone your arms, no equipment needed",
+    title: "Talk with a coach about upper-body strength",
     body: [
-      "Want stronger, more toned arms without complicated gear? Anas Plus coaches put together four simple, effective, accessible moves to strengthen your upper body gently — perfect to add to any session.",
-      "Each movement is designed to improve posture, strength and stability at the same time. Ask your coach to show you the full routine next time you're in, and work it into your regular Anas Plus training.",
+      "Interested in upper-body strength? Talk with a coach about the equipment, movement options and level that suit your current training.",
+      "A coach can demonstrate a movement and help you decide whether it belongs in your routine. Ask at Bouzayen or Route Tunis.",
     ],
   },
   {
     id: "nutrition-rules",
     category: "Nutrition",
     image: "/images/anasplus/magazine/nutrition.jpg",
-    title: "Nutrition & training: 4 golden rules for performance",
+    title: "Nutrition and training",
     body: [
-      "A great workout isn't enough on its own — what you eat around it matters just as much. Four simple habits from our coaches: protein after your session to help recovery, regular hydration to keep your body at its best, a light pre-training snack for an energy boost, and cutting back on excess sugar for results that last.",
-      "Small habits, big difference. Start applying these four at your very next session at Anas Plus.",
+      "Nutrition needs vary from person to person. For advice connected to your health or training plan, speak with a qualified nutrition professional.",
+      "At the club, you can ask a coach how nutrition and training are discussed in your sessions.",
     ],
   },
   {
     id: "hydration",
     category: "Nutrition",
     image: "/images/anasplus/magazine/hydration.jpg",
-    title: "Why water is your best training partner",
+    title: "Water and your workout",
     body: [
-      "Staying hydrated isn't just about quenching your thirst. Drinking regularly boosts your energy, protects your muscles, and improves how you perform in every session.",
-      "Keep a bottle with you at the club and sip throughout your workout, not just when you feel thirsty — by then, your performance has already started to dip. Better hydration really does mean better training.",
+      "Bring water for your workout and take breaks as needed. If you have individual hydration needs, follow advice from your healthcare professional.",
+      "A coach can help you plan practical pauses during a session, especially when you are new to the club or trying a class for the first time.",
     ],
   },
   {
@@ -67,8 +67,8 @@ const ARTICLES = [
     image: "/images/anasplus/class-zumba-2.jpg",
     title: "Zumba at Anas Plus: energy, music, motivation",
     body: [
-      "Dance it, feel it, sweat it. Zumba at Anas Plus is an explosion of energy, music and good vibes — every session feels like a party, and every level is welcome.",
-      "Ambiance explosive et bonne humeur garantie: our coaches keep the choreography accessible while the music keeps the room moving. No two sessions are ever quite the same.",
+      "Anas Plus shares Zumba sessions with music and group energy. Ask the branch which sessions are currently running.",
+      "Move with the music in a dance-based group workout. Anas Plus shares Zumba sessions with the club community; ask your branch about the current timetable.",
     ],
   },
   {
@@ -77,8 +77,8 @@ const ARTICLES = [
     image: "/images/anasplus/hero-group.jpg",
     title: "Why training together makes you stronger",
     body: [
-      "Plus fort ensemble — training with a partner or a full class pushes you further than training alone. More motivation, more accountability, and a lot more energy in the room.",
-      "Whether it's a CrossFit session, a Cardio Sunset class, or a Spinning ride with the whole group pedaling to the beat, our group classes are built around the idea that we train better together.",
+      "Shared sessions bring people together and add a social side to training.",
+      "Whether it's a Hybrid session, a Cardio Sunset event or a Spinning ride at Route Tunis, our group training brings people together.",
     ],
   },
 ];
@@ -161,8 +161,8 @@ export default function MagazinePage() {
       ))}
 
       <CtaSection
-        heading="Ready to feel it for yourself? Book a free trial today!"
-        primaryLabel="BOOK A FREE TRIAL"
+        heading="Ready to meet the team and explore the clubs?"
+        primaryLabel="PLAN A VISIT"
         primaryHref="/free-trial"
         secondaryLabel="VIEW ALL CLASSES"
         secondaryHref="/classes"

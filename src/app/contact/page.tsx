@@ -5,7 +5,7 @@ import { InstagramIcon } from "@/components/icons";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Anas Plus Fitness Club - call, WhatsApp, or message us on Instagram.",
+    "Call, WhatsApp or message Anas Plus Bouzayen in Sfax or Route Tunis in Tunis.",
 };
 
 const CONTACTS = [
@@ -23,13 +23,13 @@ const CONTACTS = [
   },
   {
     Icon: InstagramIcon,
-    label: "Instagram – Bouzayen",
+    label: "Instagram – Bouzayen · Sfax",
     value: "@anasplusbouzayen",
     href: "https://instagram.com/anasplusbouzayen",
   },
   {
     Icon: InstagramIcon,
-    label: "Instagram – Route Tunis",
+    label: "Instagram – Route Tunis · Tunis",
     value: "@anasplus_rte_tunis",
     href: "https://instagram.com/anasplus_rte_tunis",
   },
@@ -44,8 +44,8 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="mt-3 font-sans text-[16px] text-white/80">
-            Questions about coaching, classes or membership? Reach us
-            directly — we reply fast.
+            Questions about coaching, classes or membership? Contact either club
+            directly using the phone number or branch account below.
           </p>
         </div>
       </section>

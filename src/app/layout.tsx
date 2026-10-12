@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | Anas Plus",
   },
   description:
-    "Anas Plus Fitness Club - personal coaching, Pilates, Zumba, Spinning and more in Sfax. Le goût du corps, le goût du sport.",
+    "Anas Plus has two fitness club locations in Tunisia: Bouzayen in Sfax and Route Tunis in Tunis.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

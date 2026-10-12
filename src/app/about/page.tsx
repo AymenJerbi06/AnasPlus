@@ -1,125 +1,108 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import CtaSection from "@/components/CtaSection";
-
-const STATS = [
-  { value: "2", label: "Clubs in Sfax" },
-  { value: "5+", label: "Weekly classes" },
-  { value: "14K+", label: "Instagram community" },
-  { value: "600+", label: "At our first Pilates Outdoor" },
-];
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Anas Plus",
   description:
-    "Anas Plus Fitness Club - le goût du corps, le goût du sport. Personal coaching and group classes across two clubs in Sfax.",
+    "Follow the story of Anas Plus through club posts, community events and training spaces in Sfax and Tunis.",
 };
+
+const MILESTONES = [
+  {
+    date: "May 2017",
+    title: "The archive begins",
+    copy:
+      "The earliest indexed Bouzayen post in the supplied club archive is dated 11 May 2017. It features a CrossFit session.",
+  },
+  {
+    date: "November 2025",
+    title: "Pilates Outdoor brings people together",
+    copy:
+      "The first recorded Pilates Outdoor gathering moved beyond the club floor and brought the wider community together.",
+  },
+  {
+    date: "June 2026",
+    title: "A dedicated Pilates studio opens",
+    copy:
+      "Bouzayen’s June posts mark a new chapter in the club’s specialist training spaces.",
+  },
+];
 
 export default function AboutPage() {
   return (
     <>
       <section className="relative flex min-h-[380px] items-center overflow-hidden bg-black">
         <Image
-          src="/images/anasplus/hero-main.jpg"
-          alt="Coach training a member at Anas Plus"
+          src="/images/anasplus/club-gallery/bouzayen-group-training.webp"
+          alt="Anas Plus members training together"
           fill
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: "70% 15%" }}
+          style={{ objectPosition: "center 30%" }}
         />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/10"
-        />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/10" />
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 py-14 lg:px-8">
           <div className="w-full text-center lg:w-[55%] lg:text-left">
-            <h1 className="font-heading text-[32px] leading-[38px] font-bold italic uppercase text-white sm:text-[42px]">
-              About Anas Plus
-            </h1>
-            <p className="mx-auto mt-4 max-w-[480px] font-sans text-[16px] leading-[1.4] text-white sm:text-[18px] lg:mx-0">
-              Le goût du corps, le goût du sport.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white px-6 py-16 lg:px-8">
-        <div className="container mx-auto max-w-[680px] text-center">
-          <p className="font-sans text-[16px] leading-[1.7] text-ff-graphit">
-            Anas Plus is a fitness club built around two things: the taste
-            for the body, and the taste for sport. We run two clubs in
-            Sfax — Anas Plus Bouzayen and Anas Plus Route Tunis — each
-            offering personal coaching and a full weekly schedule of group
-            classes: Pilates, Zumba, Spinning, Yoga and CrossFit.
-          </p>
-          <p className="mt-4 font-sans text-[16px] leading-[1.7] text-ff-graphit">
-            Whether you train one-on-one with a coach or join the energy of
-            a group class, our team adapts to your goals, your pace and
-            your level. Several sessions each week run 100% Femmes, and
-            throughout the year we bring the community together for events
-            like Pilates Outdoor.
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-black px-6 py-14 lg:px-8">
-        <div className="container mx-auto grid grid-cols-2 gap-8 text-center sm:grid-cols-4">
-          {STATS.map((stat) => (
-            <div key={stat.label}>
-              <p className="font-heading text-[32px] italic text-ff-red">
-                {stat.value}
-              </p>
-              <p className="mt-1 font-sans text-sm text-white">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-white px-6 py-16 lg:px-8">
-        <div className="container mx-auto grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="relative aspect-[4/3] w-full overflow-hidden">
-            <Image
-              src="/images/anasplus/class-strength.jpg"
-              alt="Anas Plus coach guiding a member"
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
-          <div>
             <p className="font-sans text-sm font-bold tracking-[0.05em] text-ff-red uppercase">
-              Our coaches
+              A Tunisian club story
             </p>
-            <h2 className="mt-2 font-heading text-[26px] italic uppercase text-black">
-              Led By People Who Train Here Too
-            </h2>
-            <p className="mt-4 font-sans text-[16px] leading-[1.6] text-ff-graphit">
-              Every Anas Plus coach is qualified across the classes they
-              teach, from personal coaching to Pilates, Zumba, Spinning,
-              Yoga and CrossFit. They know the regulars by name, adapt
-              every session to the room, and show up with the same energy
-              whether it's your first class or your five hundredth.
+            <h1 className="mt-2 font-heading text-[32px] leading-[38px] font-bold italic uppercase text-white sm:text-[42px]">
+              Anas Plus, over time
+            </h1>
+            <p className="mx-auto mt-4 max-w-[520px] font-sans text-[16px] leading-[1.5] text-white sm:text-[18px] lg:mx-0">
+              A fitness community across Bouzayen in Sfax and Route Tunis in
+              Tunis, seen through the moments its clubs have shared.
             </p>
-            <a
-              href="/personal-training#video"
-              className="mt-6 inline-block border-2 border-black bg-black px-5 py-3 font-heading text-[15px] italic uppercase text-white transition-colors duration-200 hover:border-ff-graphit hover:bg-ff-graphit"
-            >
-              Meet Coach Anas
-            </a>
           </div>
         </div>
       </section>
 
-      <CtaSection
-        heading="Come see for yourself. Call us to get started!"
-        primaryLabel="CALL 53 266 222"
-        primaryHref="tel:53266222"
-        secondaryLabel="VIEW OUR CLUBS"
-        secondaryHref="/gyms"
-      />
+      <section className="bg-white px-6 py-16 lg:px-8">
+        <div className="container mx-auto max-w-[860px]">
+          <div className="mx-auto max-w-[720px] text-center">
+            <p className="font-sans text-sm font-bold tracking-[0.05em] text-ff-red uppercase">
+              From the club archive
+            </p>
+            <h2 className="mt-2 font-heading text-[28px] italic uppercase text-black sm:text-[34px]">
+              A timeline told by real club moments
+            </h2>
+            <p className="mt-3 font-sans text-[15px] leading-relaxed text-ff-graphit">
+              The dates below come from Anas Plus posts and event records. They
+              show how the club’s activity has changed without turning old
+              offers or timetables into current promises.
+            </p>
+          </div>
+
+          <ol className="mt-10 border-l-2 border-ff-red pl-6 sm:pl-8">
+            {MILESTONES.map((milestone) => (
+              <li key={milestone.date} className="relative pb-9 last:pb-0">
+                <span aria-hidden="true" className="absolute top-1 -left-[33px] h-3 w-3 bg-ff-red sm:-left-[41px]" />
+                <p className="font-sans text-sm font-bold tracking-[0.05em] text-ff-red uppercase">
+                  {milestone.date}
+                </p>
+                <h3 className="mt-2 font-heading text-[22px] italic uppercase text-black">
+                  {milestone.title}
+                </h3>
+                <p className="mt-2 max-w-[680px] font-sans text-[15px] leading-relaxed text-ff-graphit">
+                  {milestone.copy}
+                </p>
+              </li>
+            ))}
+          </ol>
+
+          <div className="mt-12 flex flex-wrap justify-center gap-4 border-t border-[#d5d5d5] pt-8">
+            <Link href="/facilities" className="inline-flex items-center gap-2 font-heading text-[15px] italic uppercase text-ff-red hover:text-ff-red-dark">
+              See the training spaces <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </Link>
+            <Link href="/events" className="inline-flex items-center gap-2 font-heading text-[15px] italic uppercase text-ff-red hover:text-ff-red-dark">
+              Browse club events <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

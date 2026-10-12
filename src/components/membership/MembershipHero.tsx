@@ -2,17 +2,17 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 
 const BENEFITS = [
-  "Personal coaching & group classes",
-  "Pilates, Zumba, Spinning, Yoga & CrossFit",
-  "Women-only sessions available",
+  "Choose Bouzayen in Sfax or Route Tunis in Tunis",
+  "Ask what your membership includes",
+  "Confirm current prices and terms with the club",
 ];
 
 export default function MembershipHero() {
   return (
     <section className="relative flex min-h-[460px] items-center overflow-hidden bg-black lg:min-h-[560px]">
       <Image
-        src="/images/anasplus/class-strength.jpg"
-        alt="Anas Plus members training together with barbells"
+        src="/images/anasplus/club-gallery/route-tunis-training.webp"
+        alt="A member training at Anas Plus Route Tunis"
         fill
         priority
         sizes="100vw"
@@ -29,8 +29,8 @@ export default function MembershipHero() {
             Membership &amp; Pricing
           </h1>
           <p className="mx-auto mt-4 max-w-[520px] font-sans text-[16px] leading-[1.4] text-white sm:text-[18px] lg:mx-0">
-            Coaching perso ou cours collectifs — find the way of training
-            that fits you. Join Anas Plus and start today.
+            Pick the club that works for you. Call its team for current prices,
+            included access and membership terms.
           </p>
           <ul className="mx-auto mt-6 flex max-w-[480px] flex-col gap-2 text-left sm:mx-0">
             {BENEFITS.map((benefit) => (
@@ -47,7 +47,7 @@ export default function MembershipHero() {
             href="#plans"
             className="mt-6 inline-block rounded-none border-2 border-ff-red bg-ff-red px-4 py-3 font-heading text-[16px] italic uppercase text-white transition-colors duration-200 ease-out hover:border-ff-red-dark hover:bg-ff-red-dark"
           >
-            View Membership Options
+            Ask About Membership
           </a>
         </div>
       </div>

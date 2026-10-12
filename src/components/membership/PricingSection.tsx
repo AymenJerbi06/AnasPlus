@@ -1,103 +1,65 @@
-import { Check } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, MapPin, MessageCircle, Phone } from "lucide-react";
+import { CLUBS } from "@/data/clubs";
 
-type Plan = {
-  name: string;
-  frName: string;
-  tagline: string;
-  features: string[];
-  highlighted?: boolean;
-};
-
-const PLANS: Plan[] = [
-  {
-    name: "Group Classes",
-    frName: "Cours collectifs",
-    tagline: "Train with the team, led by your coach",
-    features: [
-      "Pilates, Zumba, Spinning, Yoga & CrossFit",
-      "Women-only (100% Femmes) sessions available",
-      "Weekly schedule across both clubs",
-      "Open to every level, beginners welcome",
-    ],
-  },
-  {
-    name: "Personal Coaching",
-    frName: "Coaching perso",
-    tagline: "One-on-one, built entirely around you",
-    features: [
-      "Everything in Group Classes, plus:",
-      "A training plan built around your goals",
-      "One-on-one time with your coach, every session",
-      "Flexible scheduling at your Home Club",
-    ],
-    highlighted: true,
-  },
+const QUESTIONS = [
+  "What does membership cost at this club, and for how long?",
+  "Which classes or training areas are included?",
+  "Are personal coaching or Pilates sessions priced separately?",
+  "Are there sign-up, renewal or cancellation fees?",
 ];
 
 export default function PricingSection() {
   return (
     <section id="plans" className="scroll-mt-28 bg-white px-6 py-16 lg:px-8">
-      <div className="container mx-auto">
-        <h2 className="text-center font-sans text-[28px] font-bold not-italic normal-case text-black">
-          Choose how you train
-        </h2>
-        <p className="mx-auto mt-3 max-w-[560px] text-center font-sans text-[16px] text-ff-graphit">
-          Le goût du corps, le goût du sport. Pricing depends on your club
-          and your goals — call us at 53 266 222 for a plan built around you.
-        </p>
+      <div className="container mx-auto max-w-[1080px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="font-sans text-sm font-bold tracking-[0.05em] text-ff-red uppercase">
+            Clear before you join
+          </p>
+          <h2 className="mt-2 font-heading text-[28px] italic uppercase text-black">
+            Ask about membership at your club
+          </h2>
+          <p className="mt-3 font-sans text-[15px] leading-relaxed text-ff-graphit">
+            Anas Plus does not publish a current price list or full membership terms online. Archived offers have expired, so call the club for today&apos;s price and what it includes.
+          </p>
+        </div>
 
-        <div className="mx-auto mt-10 grid max-w-[920px] grid-cols-1 gap-8 md:grid-cols-2">
-          {PLANS.map((plan) => (
-            <div
-              key={plan.name}
-              className={`flex flex-col border p-8 ${
-                plan.highlighted
-                  ? "border-2 border-ff-red bg-black text-white"
-                  : "border-[#9c9e9f] bg-white text-black"
-              }`}
-            >
-              <h3
-                className={`font-heading text-[26px] italic uppercase ${
-                  plan.highlighted ? "text-white" : "text-black"
-                }`}
-              >
-                {plan.name}
-              </h3>
-              <p
-                className={`mt-1 font-sans text-sm italic ${
-                  plan.highlighted ? "text-white/60" : "text-ff-graphit"
-                }`}
-              >
-                {plan.frName}
+        <div className="mx-auto mt-9 max-w-[760px] border border-[#d5d5d5] bg-ff-footer p-6 sm:p-8">
+          <h3 className="font-heading text-[21px] italic uppercase text-black">Useful questions to ask</h3>
+          <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {QUESTIONS.map((question) => (
+              <li key={question} className="flex items-start gap-3 font-sans text-sm leading-relaxed text-ff-graphit">
+                <span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-ff-red" />
+                <span>{question}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-9 grid grid-cols-1 gap-5 md:grid-cols-2">
+          {CLUBS.map((club) => (
+            <article key={club.slug} className="border border-[#d5d5d5] p-6 sm:p-7">
+              <p className="flex items-center gap-2 font-sans text-sm font-semibold text-ff-red">
+                <MapPin aria-hidden="true" className="h-4 w-4" />
+                {club.area}, {club.city}
               </p>
-              <p
-                className={`mt-3 font-sans text-sm ${
-                  plan.highlighted ? "text-white/80" : "text-ff-graphit"
-                }`}
-              >
-                {plan.tagline}
+              <h3 className="mt-2 font-heading text-[22px] italic uppercase text-black">{club.name}</h3>
+              <p className="mt-2 font-sans text-sm leading-relaxed text-ff-graphit">
+                Ask this team for current membership prices, included access and start dates.
               </p>
-
-              <ul className="mt-6 flex flex-1 flex-col gap-3">
-                {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2 font-sans text-sm">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-ff-red" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href="tel:53266222"
-                className={`mt-8 inline-block border-2 px-4 py-3 text-center font-heading text-[16px] italic uppercase transition-colors duration-200 ease-out ${
-                  plan.highlighted
-                    ? "border-ff-red bg-ff-red text-white hover:border-ff-red-dark hover:bg-ff-red-dark"
-                    : "border-black bg-black text-white hover:border-ff-graphit hover:bg-ff-graphit"
-                }`}
-              >
-                Call for Pricing
-              </a>
-            </div>
+              <div className="mt-5 flex flex-wrap gap-x-5 gap-y-3">
+                <a href="tel:53266222" className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-black underline underline-offset-4 hover:text-ff-red">
+                  <Phone aria-hidden="true" className="h-4 w-4" /> Call 53 266 222
+                </a>
+                <a href={club.instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-black underline underline-offset-4 hover:text-ff-red">
+                  <MessageCircle aria-hidden="true" className="h-4 w-4" /> Message this club
+                </a>
+              </div>
+              <Link href={"/gyms/" + club.slug} className="mt-5 inline-flex items-center gap-2 font-heading text-sm italic uppercase text-ff-red hover:text-ff-red-dark">
+                View club details <ArrowRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
+            </article>
           ))}
         </div>
       </div>

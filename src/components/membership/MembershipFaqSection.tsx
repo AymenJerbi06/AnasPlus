@@ -4,39 +4,27 @@ import type { FaqItem } from "@/types/content";
 const FAQ_ITEMS: FaqItem[] = [
   {
     number: "01",
-    question: "How is Anas Plus pricing structured?",
+    question: "Where can I see the current prices?",
     answer:
-      "Pricing depends on whether you choose personal coaching or group classes, your club, and your schedule. Call or message us at 53 266 222 and we'll find the right fit for your goals and budget.",
+      "Call or message the club at 53 266 222. Rates can change, and the archived social posts include offers with past expiry dates rather than a current price list.",
   },
   {
     number: "02",
-    question: "What's the difference between the two clubs?",
+    question: "Can I ask about group sessions and personal coaching together?",
     answer:
-      "Anas Plus Bouzayen and Anas Plus Route Tunis each run their own weekly class schedule — Pilates, Zumba, Spinning, Yoga, CrossFit and more. Both offer personal coaching and women-only sessions. Ask us which schedule fits you best.",
+      "Yes. Tell the team which club you prefer and whether you are interested in group sessions, one-to-one coaching or both. They can explain the current options and rates.",
   },
   {
     number: "03",
-    question: "Can I try a class before signing up?",
+    question: "Are offers on older posts still available?",
     answer:
-      "Yes — we regularly run open days and trial sessions. Follow @anasplusbouzayen or @anasplus_rte_tunis on Instagram, or call us directly, to find out when the next one is.",
+      "Only the club can confirm whether a promotion is active. Call 53 266 222 before making plans based on an older post.",
   },
   {
     number: "04",
-    question: "Are the group classes beginner-friendly?",
+    question: "How do I discuss a membership in person?",
     answer:
-      "Absolutely. Whether it's your first Zumba class or your hundredth CrossFit session, our coaches adapt the intensity to the room. No experience needed to join in.",
-  },
-  {
-    number: "05",
-    question: "Do you offer women-only sessions?",
-    answer:
-      "Yes — several sessions each week (cardio, abs, yoga and more) run as 100% Femmes classes, in addition to our mixed sessions.",
-  },
-  {
-    number: "06",
-    question: "How do I pause or cancel my membership?",
-    answer:
-      "Contact your Home Club directly, in person or by phone at 53 266 222, and our team will take care of it.",
+      "Use Plan a Visit to choose a branch, or call the team at 53 266 222 to arrange a conversation.",
   },
 ];
 

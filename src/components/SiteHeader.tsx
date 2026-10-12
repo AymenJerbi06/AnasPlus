@@ -44,7 +44,7 @@ export default function SiteHeader() {
       <header
         onMouseLeave={closeSoon}
         className={`fixed top-0 left-0 right-0 z-50 bg-ff-black transition-all duration-300 ease-in-out ${
-          scrolled ? "h-16" : "h-[108px]"
+          scrolled ? "h-16" : "h-16 lg:h-[108px]"
         }`}
       >
         {/* Utility bar */}
@@ -67,19 +67,32 @@ export default function SiteHeader() {
         </div>
 
         {/* Main bar */}
-        <div className="mx-auto flex h-16 w-full max-w-[1440px] items-center justify-between px-8">
-          <Link href="/" className="flex shrink-0 items-center">
-            <Image
-              src="/images/anasplus/logo-white.png"
-              alt="Anas Plus"
-              width={900}
-              height={505}
-              className="h-10 w-auto lg:h-12"
-              priority
-            />
-          </Link>
+        <div className="mx-auto flex h-16 w-full max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-8">
+          <div className="flex shrink-0 items-center gap-4">
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/anasplus/logo-white.png"
+                alt="Anas Plus"
+                width={900}
+                height={505}
+                className="h-10 w-auto lg:h-12"
+                priority
+              />
+            </Link>
+            <Link
+              href="/"
+              aria-current={pathname === "/" ? "page" : undefined}
+              className={`hidden h-16 items-center border-b-[3px] pt-[3px] font-sans text-sm font-semibold transition-colors duration-200 sm:flex ${
+                pathname === "/"
+                  ? "border-ff-red text-ff-red"
+                  : "border-transparent text-white hover:text-ff-red"
+              }`}
+            >
+              Home
+            </Link>
+          </div>
 
-          <nav className="hidden items-stretch gap-6 lg:flex">
+          <nav className="hidden items-stretch gap-3 lg:flex 2xl:gap-5">
             {NAV_LINKS.map((link) => {
               const active =
                 pathname === link.href ||
@@ -96,6 +109,7 @@ export default function SiteHeader() {
                 >
                   <Link
                     href={link.href}
+                    aria-current={active ? "page" : undefined}
                     className="group relative flex h-16 items-center gap-1 font-sans text-[15px] font-medium text-white visited:text-white"
                   >
                     {link.label}
@@ -120,19 +134,19 @@ export default function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <button
-              type="button"
+            <Link
+              href="/membership"
               className="border-2 border-ff-red bg-ff-red px-3 py-2 font-heading text-xs italic uppercase text-white transition-colors duration-200 ease-out hover:border-ff-red-dark hover:bg-ff-red-dark lg:px-5 lg:py-2.5 lg:text-sm"
             >
-              Become a Member
-            </button>
+              Membership Info
+            </Link>
 
             <button
               type="button"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((open) => !open)}
-              className="text-white lg:hidden"
+              className="flex h-11 w-11 items-center justify-center text-white lg:hidden"
             >
               {mobileOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -191,6 +205,7 @@ export default function SiteHeader() {
                   <Link
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
+                    aria-current={pathname === link.href ? "page" : undefined}
                     className={`font-heading text-[18px] font-bold not-italic normal-case text-white visited:text-white transition-colors duration-200 hover:text-ff-red ${
                       pathname === link.href ? "text-ff-red" : ""
                     }`}
@@ -257,7 +272,7 @@ export default function SiteHeader() {
         </div>
       </div>
 
-      <div style={{ height: 108 }} />
+      <div className="h-16 lg:h-[108px]" aria-hidden="true" />
     </>
   );
 }

@@ -1,15 +1,15 @@
 const BENEFITS = [
   {
-    title: "Women Only",
-    text: "Several sessions each week — cardio, abs, yoga and more — run 100% Femmes, alongside our mixed classes.",
+    title: "Choose your pace",
+    text: "Ask a coach about strength sessions, group classes and what suits your experience.",
   },
   {
     title: "Two Clubs",
-    text: "Train at Anas Plus Bouzayen or Anas Plus Route Tunis, both in Sfax, each with its own weekly schedule.",
+    text: "Train at Anas Plus Bouzayen in Sfax or Anas Plus Route Tunis in Tunis. Each club shares its own timetable.",
   },
   {
     title: "Community Events",
-    text: "From Pilates Outdoor — over 600 participants at our first edition — to open days, we train together off the schedule too.",
+    text: "Anas Plus has brought members together through group classes and outdoor sessions such as Pilates Outdoor.",
   },
 ];
 

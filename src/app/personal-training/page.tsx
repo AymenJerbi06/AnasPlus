@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import BookingStepsSection from "@/components/BookingStepsSection";
-import FaqSection from "@/components/FaqSection";
 import VideoSection from "@/components/VideoSection";
-import ArticlesSection from "@/components/ArticlesSection";
 import CtaSection from "@/components/CtaSection";
 
 export const metadata: Metadata = {
@@ -17,15 +15,13 @@ export default function PersonalTrainingPage() {
     <>
       <HeroSection />
       <BookingStepsSection />
-      <FaqSection />
       <VideoSection />
-      <ArticlesSection />
       <CtaSection
-        heading="Ready to get started? Call us and book your first session today!"
+        heading="Ask your preferred club about personal coaching."
         primaryLabel="CALL 53 266 222"
         primaryHref="tel:53266222"
-        secondaryLabel="MESSAGE US ON INSTAGRAM"
-        secondaryHref="https://instagram.com/anasplusbouzayen"
+        secondaryLabel="CHOOSE A CLUB"
+        secondaryHref="/gyms"
       />
     </>
   );

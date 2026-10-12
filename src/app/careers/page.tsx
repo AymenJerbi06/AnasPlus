@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Join the Anas Plus team as a coach or instructor across our Sfax clubs.",
+    "Join the Anas Plus team as a coach or instructor in Sfax or Tunis.",
 };
 
 export default function CareersPage() {
@@ -37,10 +37,10 @@ export default function CareersPage() {
             Become a Coach
           </h2>
           <p className="mt-4 font-sans text-[16px] leading-[1.7] text-ff-graphit">
-            We&apos;re always open to hearing from qualified coaches and
-            instructors — personal training, Pilates, Zumba, Spinning, Yoga
-            or CrossFit — who want to join the Anas Plus team across our
-            Bouzayen or Route Tunis clubs.
+            Interested in coaching or leading group training at Anas Plus?
+            Send the team a note about your experience and the kind of
+            sessions you lead. We&apos;ll let you know about current openings
+            at Bouzayen in Sfax or Route Tunis in Tunis.
           </p>
           <p className="mt-4 font-sans text-[16px] leading-[1.7] text-ff-graphit">
             Call us at 53 266 222 or send us a message on Instagram with

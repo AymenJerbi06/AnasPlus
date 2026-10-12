@@ -2,14 +2,12 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 
 const CHECKLIST = [
-  "Two clubs in Sfax: Bouzayen and Route Tunis",
-  "Personal coaching & daily group classes",
-  "Pilates, Zumba, Spinning, Yoga & CrossFit",
-  "Women-only (100% Femmes) sessions available",
-  "Modern strength, cardio & spin equipment",
-  "Dedicated, qualified Anas Plus coaches",
-  "Community events like Pilates Outdoor",
-  "A training plan built around your goals",
+  "Two locations: Bouzayen in Sfax and Route Tunis in Tunis",
+  "Personal coaching and group sessions",
+  "Strength training, Hybrid, MetaFit, Pilates and Zumba",
+  "Spinning at Anas Plus Route Tunis",
+  "Class timetables shared by each club",
+  "Contact the team for current membership prices",
 ];
 
 export default function ClubExperienceSection() {
@@ -18,8 +16,8 @@ export default function ClubExperienceSection() {
       <div className="container mx-auto grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div className="relative aspect-[4/3] w-full overflow-hidden lg:aspect-[4/5]">
           <Image
-            src="/images/anasplus/hero-main.jpg"
-            alt="Inside an Anas Plus club"
+            src="/images/anasplus/club-gallery/route-tunis-group-session-july-2026.webp"
+            alt="Members taking part in a group training session at Anas Plus Route Tunis"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
@@ -28,7 +26,7 @@ export default function ClubExperienceSection() {
         </div>
         <div>
           <p className="font-sans text-sm font-bold tracking-[0.05em] text-ff-red uppercase">
-            Sfax, Tunisia
+            Bouzayen · Sfax / Route Tunis · Tunis
           </p>
           <h2 className="mt-2 font-heading text-[28px] italic uppercase text-black">
             What awaits you

@@ -13,7 +13,7 @@ const ARTICLES: ArticleCard[] = [
     image: "/images/anasplus/class-zumba.jpg",
     title: "Zumba at Anas Plus: energy, music, motivation",
     excerpt:
-      "Ambiance explosive et bonne humeur garantie. Dance it, feel it, sweat it — no two Zumba sessions are ever quite the same.",
+      "Move with the music in a dance-based group workout. Ask your club about current class times.",
     href: "/magazine#zumba",
   },
   {

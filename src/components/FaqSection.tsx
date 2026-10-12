@@ -19,13 +19,13 @@ const FAQ_ITEMS: FaqItem[] = [
     number: "03",
     question: "What's the difference between coaching and group classes?",
     answer:
-      "Personal coaching (Coaching perso) is one-on-one, fully built around your goals and pace. Group classes (Cours collectifs) — Pilates, Zumba, Spinning, Yoga and more — give you the energy of training with others, led by one of our coaches. Many members do both.",
+      "Personal coaching gives you time with a coach. Group sessions add the shared energy of Pilates, Zumba, Hybrid, MetaFit and other classes. Ask your club which options are on this week.",
   },
   {
     number: "04",
     question: "Do you offer women-only sessions?",
     answer:
-      "Yes. Several of our weekly sessions — including cardio, abs, and yoga — run as 100% Femmes (women-only) classes, alongside our mixed sessions. Check the schedule at your club for exact times.",
+      "Anas Plus has shared women-only and mixed training sessions. Availability changes, so ask your club which formats are currently on the schedule.",
   },
   {
     number: "05",

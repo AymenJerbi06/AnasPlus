@@ -1,15 +1,15 @@
 const FEATURES = [
   {
     title: "Coaching",
-    text: "You choose. One-on-one personal coaching built entirely around your goals and your schedule.",
+    text: "Talk with a coach about your goals and the training approach that suits you.",
   },
   {
     title: "Classes",
-    text: "Pilates, Zumba, Spinning, Yoga, CrossFit — push your limits with a packed weekly schedule.",
+    text: "Strength training, Hybrid, MetaFit, Pilates and Zumba, plus Spinning at Route Tunis.",
   },
   {
     title: "Community",
-    text: "From women-only sessions to events like Pilates Outdoor, train as part of something bigger.",
+    text: "From group sessions to Pilates Outdoor, Anas Plus has a history of bringing people together.",
   },
 ];
 

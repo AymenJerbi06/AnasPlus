@@ -1,59 +1,85 @@
 import type { Metadata } from "next";
-import FaqAccordion from "@/components/FaqAccordion";
-import type { FaqItem } from "@/types/content";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "FAQ",
-  description: "Frequently asked questions about Anas Plus Fitness Club.",
+  title: "Help & FAQs",
+  description:
+    "Find the right Anas Plus page for membership, class schedules, first visits and club contacts.",
 };
 
-const FAQ_ITEMS: FaqItem[] = [
+const HELP_LINKS = [
   {
-    number: "01",
-    question: "How is Anas Plus pricing structured?",
-    answer:
-      "Pricing depends on whether you choose personal coaching or group classes, your club, and your schedule. Call or message us at 53 266 222 and we'll find the right fit for your goals and budget.",
+    title: "Membership and current prices",
+    text: "See the membership options and ask the club for current rates.",
+    href: "/membership",
   },
   {
-    number: "02",
-    question: "What classes do you offer?",
-    answer:
-      "Pilates, Zumba, Spinning, Yoga and CrossFit, across both our Bouzayen and Route Tunis clubs — plus one-on-one personal coaching.",
+    title: "Class formats and timetable posts",
+    text: "Browse class descriptions, then check the branch notes for recent schedule posts.",
+    href: "/classes",
   },
   {
-    number: "03",
-    question: "Do you offer women-only sessions?",
-    answer:
-      "Yes — several sessions each week (cardio, abs, yoga and more) run as 100% Femmes classes, in addition to our mixed sessions.",
+    title: "Club location and branch details",
+    text: "Compare Bouzayen and Route Tunis and open the right club profile.",
+    href: "/gyms",
   },
   {
-    number: "04",
-    question: "Can I try a class before signing up?",
-    answer:
-      "Yes — book a free trial session any time. Call 53 266 222 or follow our Instagram accounts for open days and trial sessions.",
+    title: "Plan a first visit",
+    text: "Find out how to contact the team and ask about trying a session.",
+    href: "/free-trial",
   },
   {
-    number: "05",
-    question: "How do I pause or cancel my membership?",
-    answer:
-      "Contact your Home Club directly, in person or by phone at 53 266 222, and our team will take care of it.",
+    title: "Women’s sessions",
+    text: "Ask about women-only and mixed sessions at your preferred branch.",
+    href: "/women-only",
   },
   {
-    number: "06",
-    question: "Where are your clubs located?",
-    answer:
-      "We have two clubs in Sfax: Anas Plus Bouzayen and Anas Plus Route Tunis. Call us for directions to either location.",
+    title: "Contact or manage a membership",
+    text: "Reach the club team about directions, schedules or an existing membership.",
+    href: "/contact",
   },
 ];
 
 export default function FaqPage() {
   return (
     <section className="bg-white px-6 py-16 lg:px-8">
-      <div className="container mx-auto max-w-[800px]">
-        <h1 className="mb-8 text-center text-[32px] leading-[1.15] font-bold text-black uppercase not-italic font-heading">
-          Frequently Asked Questions
-        </h1>
-        <FaqAccordion items={FAQ_ITEMS} />
+      <div className="container mx-auto max-w-[1000px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="font-sans text-sm font-bold tracking-[0.05em] text-ff-red uppercase">
+            Help &amp; information
+          </p>
+          <h1 className="mt-2 font-heading text-[32px] italic uppercase text-black sm:text-[40px]">
+            Find the answer you need
+          </h1>
+          <p className="mt-3 font-sans text-[15px] leading-relaxed text-ff-graphit">
+            Go straight to the subject you need. Class times, visit options and
+            prices can change, so contact the selected club to confirm them.
+          </p>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {HELP_LINKS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group flex min-h-[190px] flex-col justify-between border border-[#d5d5d5] p-5 transition-colors hover:border-ff-red"
+            >
+              <div>
+                <h2 className="font-heading text-[20px] italic uppercase text-black">
+                  {item.title}
+                </h2>
+                <p className="mt-3 font-sans text-sm leading-relaxed text-ff-graphit">
+                  {item.text}
+                </p>
+              </div>
+              <span className="mt-5 inline-flex items-center gap-2 font-heading text-sm italic uppercase text-ff-red">
+                Go to section
+                <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </span>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );

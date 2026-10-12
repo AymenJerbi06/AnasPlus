@@ -1,20 +1,20 @@
 const STEPS = [
   { number: "- 1 -", text: "Call or message us to meet your coach." },
-  { number: "- 2 -", text: "We build a plan around your goals." },
-  { number: "- 3 -", text: "Your training can begin!" },
+  { number: "- 2 -", text: "Talk through your goals and training options." },
+  { number: "- 3 -", text: "Confirm your session and club before you come." },
 ] as const;
 
 const LOCATIONS = [
-  { name: "Anas Plus Bouzayen", href: "/gyms#bouzayen" },
-  { name: "Anas Plus Route Tunis", href: "/gyms#rte-tunis" },
+  { name: "Bouzayen · Sfax", href: "/gyms/bouzayen" },
+  { name: "Route Tunis · Tunis", href: "/gyms/rte-tunis" },
 ] as const;
 
 export function BookingStepsSection() {
   return (
-    <section id="form" className="scroll-mt-28 bg-ff-black px-8 py-16">
+    <section id="how-it-works" className="scroll-mt-28 bg-ff-black px-8 py-16">
       <div className="container mx-auto">
         <h2 className="mb-12 font-sans text-2xl font-bold not-italic normal-case text-white">
-          Book your first session now! Here&apos;s how:
+          How to get started with personal coaching
         </h2>
 
         <div className="flex flex-col gap-10 text-center md:flex-row md:items-start md:justify-between md:gap-8">

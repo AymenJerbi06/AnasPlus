@@ -18,26 +18,26 @@ type Slide = {
 
 const SLIDES: Slide[] = [
   {
-    image: "/images/anasplus/hero-main.jpg",
+    image: "/images/anasplus/club-gallery/bouzayen-crossfit-session-oct-2025.webp",
     objectPosition: "70% 15%",
-    eyebrow: "Le goût du sport",
+    eyebrow: "Welcome to Anas Plus · Tunisia",
     heading: "Train Your Way at Anas Plus",
-    text: "Personal coaching, Pilates, Zumba, Spinning, Yoga & CrossFit — two clubs in Sfax.",
-    primaryLabel: "BECOME A MEMBER",
-    primaryHref: "/membership",
-    secondaryLabel: "VIEW CLASSES",
-    secondaryHref: "/classes",
+    text: "Two club locations. Choose between Bouzayen in Sfax and Route Tunis in Tunis.",
+    primaryLabel: "PLAN YOUR FIRST VISIT",
+    primaryHref: "/free-trial",
+    secondaryLabel: "EXPLORE ANAS PLUS",
+    secondaryHref: "#explore",
   },
   {
-    image: "/images/anasplus/hero-group.jpg",
+    image: "/images/anasplus/club-gallery/route-tunis-group-session-july-2026.webp",
     objectPosition: "center 30%",
-    eyebrow: "Ready for change?",
-    heading: "Start Your Free Trial Today",
-    text: "Come feel the energy for yourself — book a trial session at either club, no commitment.",
-    primaryLabel: "BOOK A FREE TRIAL",
-    primaryHref: "/free-trial",
-    secondaryLabel: "DISCOVER OUR CLUBS",
-    secondaryHref: "/gyms",
+    eyebrow: "Bouzayen · Sfax   |   Route Tunis · Tunis",
+    heading: "Two Clubs. Two Cities.",
+    text: "Pick your location, then explore its spaces, classes and community.",
+    primaryLabel: "EXPLORE OUR CLUBS",
+    primaryHref: "/gyms",
+    secondaryLabel: "EXPLORE CLASSES",
+    secondaryHref: "/classes",
   },
 ];
 
@@ -45,7 +45,7 @@ const AUTOPLAY_MS = 6000;
 
 export default function HomeHeroSlider() {
   const [index, setIndex] = useState(0);
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const goTo = useCallback((i: number) => {
@@ -142,17 +142,25 @@ export default function HomeHeroSlider() {
             key={s.image}
             type="button"
             aria-label={`Go to slide ${i + 1}`}
+            aria-pressed={index === i}
             onClick={() => goTo(i)}
-            className={`h-2 w-2 rounded-full transition-colors duration-200 ${
-              i === index ? "bg-ff-red" : "bg-white/50 hover:bg-white"
-            }`}
-          />
+            className="flex h-10 w-10 items-center justify-center rounded-full focus-visible:outline-2 focus-visible:outline-white"
+          >
+            <span
+              aria-hidden="true"
+              className={`h-2 w-2 rounded-full transition-[background-color,transform] duration-200 ${
+                i === index
+                  ? "scale-125 bg-ff-red"
+                  : "bg-white/50 hover:scale-125 hover:bg-white"
+              }`}
+            />
+          </button>
         ))}
         <button
           type="button"
           aria-label={playing ? "Pause slider" : "Play slider"}
           onClick={() => setPlaying((p) => !p)}
-          className="ml-2 flex h-6 w-6 items-center justify-center text-white/70 transition-colors duration-200 hover:text-white"
+          className="ml-1 flex h-10 w-10 items-center justify-center text-white/70 transition-colors duration-200 hover:text-white focus-visible:outline-2 focus-visible:outline-white"
         >
           {playing ? (
             <Pause className="h-4 w-4" />

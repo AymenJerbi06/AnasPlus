@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Member Login",
-  description: "Member account access for Anas Plus Fitness Club.",
+  title: "Membership Support",
+  description: "Contact the Anas Plus team about membership changes, schedules or billing.",
 };
 
 export default function MemberLoginPage() {
@@ -10,12 +10,12 @@ export default function MemberLoginPage() {
     <section className="bg-white px-6 py-20 text-center lg:px-8">
       <div className="container mx-auto max-w-[480px]">
         <h1 className="font-heading text-[28px] italic uppercase text-black">
-          Member Login
+          Membership Support
         </h1>
         <p className="mt-4 font-sans text-[16px] leading-[1.6] text-ff-graphit">
-          Membership management at Anas Plus is handled directly by our
-          team — in person or by phone. Call us for anything related to
-          your membership, schedule, or billing.
+          Anas Plus does not offer an online member login. The team handles
+          membership changes and billing in person or by phone. Call for help
+          with your membership or schedule.
         </p>
         <a
           href="tel:53266222"

@@ -2,25 +2,25 @@ import Image from "next/image";
 
 const OFFERS = [
   {
-    title: "Women Only",
+    title: "Pilates",
     description:
-      "100% Femmes sessions run every week across cardio, abs and yoga classes, alongside our mixed sessions.",
-    image: "/images/anasplus/class-yoga.jpg",
-    href: "/women-only",
+      "Try focused movement for balance and control, including recent Combo Chair sessions.",
+    image: "/images/anasplus/class-pilates.jpg",
+    href: "/classes#pilates",
   },
   {
-    title: "New Members",
+    title: "Hybrid Training",
     description:
-      "First time at Anas Plus? We run open days throughout the year — follow us on Instagram for the next one.",
-    image: "/images/anasplus/class-zumba-2.jpg",
+      "Bring cardio and resistance together in one energetic coached session.",
+    image: "/images/anasplus/club-gallery/route-tunis-cardio.webp",
     href: "/free-trial",
   },
   {
-    title: "Train Together",
+    title: "Spinning at Route Tunis",
     description:
-      "Bring a friend and keep each other motivated. More energy, more accountability, better results.",
+      "Ride as a group at Route Tunis. Call to confirm current class times.",
     image: "/images/anasplus/class-spinning.jpg",
-    href: "/classes",
+    href: "/classes#spinning",
   },
 ];
 

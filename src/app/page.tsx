@@ -1,26 +1,18 @@
 import type { Metadata } from "next";
 import HomeHeroSlider from "@/components/home/HomeHeroSlider";
-import DiscoverSection from "@/components/home/DiscoverSection";
-import PopularClassesSection from "@/components/home/PopularClassesSection";
-import FreeTrialBanner from "@/components/home/FreeTrialBanner";
-import ArticlesSection from "@/components/ArticlesSection";
-import CityCarouselSection from "@/components/gyms/CityCarouselSection";
+import HomeExplorerSection from "@/components/home/HomeExplorerSection";
 
 export const metadata: Metadata = {
   title: "Anas Plus Fitness Club",
   description:
-    "Anas Plus Fitness Club - personal coaching, Pilates, Zumba, Spinning and more across two clubs in Sfax.",
+    "Discover Anas Plus in Sfax and Tunis, with coached strength training, Pilates, group sessions and more.",
 };
 
 export default function Home() {
   return (
     <>
       <HomeHeroSlider />
-      <DiscoverSection />
-      <PopularClassesSection />
-      <FreeTrialBanner />
-      <ArticlesSection />
-      <CityCarouselSection />
+      <HomeExplorerSection />
     </>
   );
 }

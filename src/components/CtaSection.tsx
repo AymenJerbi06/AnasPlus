@@ -7,11 +7,11 @@ type CtaSectionProps = {
 };
 
 export default function CtaSection({
-  heading = "Ready to get started? Book your first personal training session now!",
-  primaryLabel = "FIND A TRAINER NOW",
-  primaryHref = "#form",
-  secondaryLabel = "BOOK AN APPOINTMENT",
-  secondaryHref = "/contact",
+  heading = "Ready to meet the team? Call us.",
+  primaryLabel = "CALL 53 266 222",
+  primaryHref = "tel:53266222",
+  secondaryLabel = "CHOOSE A CLUB",
+  secondaryHref = "/gyms",
 }: CtaSectionProps) {
   return (
     <section className="bg-black px-8 py-16 text-center">
