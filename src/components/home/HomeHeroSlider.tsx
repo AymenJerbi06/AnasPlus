@@ -1,6 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type PointerEvent as ReactPointerEvent,
+} from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 
@@ -47,10 +53,28 @@ export default function HomeHeroSlider() {
   const [index, setIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const swipeStartRef = useRef<{ x: number; y: number } | null>(null);
 
   const goTo = useCallback((i: number) => {
     setIndex((i + SLIDES.length) % SLIDES.length);
   }, []);
+
+  const handlePointerDown = (event: ReactPointerEvent<HTMLElement>) => {
+    if (event.pointerType !== "touch") return;
+    swipeStartRef.current = { x: event.clientX, y: event.clientY };
+  };
+
+  const handlePointerUp = (event: ReactPointerEvent<HTMLElement>) => {
+    const start = swipeStartRef.current;
+    swipeStartRef.current = null;
+    if (!start || event.pointerType !== "touch") return;
+
+    const deltaX = event.clientX - start.x;
+    const deltaY = event.clientY - start.y;
+    if (Math.abs(deltaX) < 48 || Math.abs(deltaX) < Math.abs(deltaY) * 1.2) return;
+
+    goTo(index + (deltaX < 0 ? 1 : -1));
+  };
 
   useEffect(() => {
     if (!playing) return;
@@ -65,7 +89,14 @@ export default function HomeHeroSlider() {
   const slide = SLIDES[index];
 
   return (
-    <section className="relative flex min-h-[520px] items-center overflow-hidden bg-black lg:min-h-[640px]">
+    <section
+      aria-label="Anas Plus gym photos"
+      aria-roledescription="carousel"
+      onPointerDown={handlePointerDown}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={() => { swipeStartRef.current = null; }}
+      className="relative flex min-h-[480px] touch-pan-y select-none items-center overflow-hidden bg-black sm:min-h-[520px] lg:min-h-[640px]"
+    >
       {SLIDES.map((s, i) => (
         <div
           key={s.image}
@@ -80,37 +111,38 @@ export default function HomeHeroSlider() {
             fill
             priority={i === 0}
             sizes="100vw"
+            draggable={false}
             className="object-cover"
             style={{ objectPosition: s.objectPosition }}
           />
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent"
+            className="absolute inset-0 bg-gradient-to-b from-black/15 via-black/45 to-black/90 lg:bg-gradient-to-r lg:from-black/85 lg:via-black/45 lg:to-transparent"
           />
         </div>
       ))}
 
-      <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 py-16 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div className="w-full text-center lg:w-[55%] lg:text-left">
-          <p className="font-sans text-sm font-bold tracking-[0.05em] text-ff-red uppercase">
+          <p className="font-sans text-xs font-bold tracking-[0.05em] text-ff-red uppercase sm:text-sm">
             {slide.eyebrow}
           </p>
-          <h1 className="mt-2 font-heading text-[32px] leading-[38px] font-bold italic uppercase text-white sm:text-[44px] sm:leading-[50px]">
+          <h1 className="mt-2 font-heading text-[28px] leading-[34px] font-bold italic uppercase text-white sm:text-[36px] sm:leading-[42px] lg:text-[44px] lg:leading-[50px]">
             {slide.heading}
           </h1>
-          <p className="mx-auto mt-4 max-w-[480px] font-sans text-[16px] leading-[1.4] text-white sm:text-[18px] lg:mx-0">
+          <p className="mx-auto mt-3 max-w-[480px] font-sans text-[14px] leading-[1.4] text-white sm:mt-4 sm:text-[16px] lg:mx-0 lg:text-[18px]">
             {slide.text}
           </p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row lg:justify-start">
+          <div className="mt-5 flex flex-col items-center gap-2 sm:mt-6 sm:flex-row sm:gap-3 lg:justify-start">
             <a
               href={slide.primaryHref}
-              className="inline-block rounded-none border-2 border-ff-red bg-ff-red px-4 py-3 font-heading text-[16px] italic uppercase text-white transition-colors duration-200 ease-out hover:border-ff-red-dark hover:bg-ff-red-dark"
+              className="inline-block rounded-none border-2 border-ff-red bg-ff-red px-3 py-2.5 font-heading text-[14px] italic uppercase text-white transition-colors duration-200 ease-out hover:border-ff-red-dark hover:bg-ff-red-dark sm:px-4 sm:py-3 lg:text-[16px]"
             >
               {slide.primaryLabel}
             </a>
             <a
               href={slide.secondaryHref}
-              className="inline-block rounded-none border-2 border-white px-4 py-3 font-heading text-[16px] italic uppercase text-white transition-colors duration-200 ease-out hover:bg-white hover:text-black"
+              className="inline-block rounded-none border-2 border-white px-3 py-2.5 font-heading text-[14px] italic uppercase text-white transition-colors duration-200 ease-out hover:bg-white hover:text-black sm:px-4 sm:py-3 lg:text-[16px]"
             >
               {slide.secondaryLabel}
             </a>
